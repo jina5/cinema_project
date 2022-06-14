@@ -28,10 +28,7 @@
             padding: 0px 30px;
         }
 
-        .chart_box img {
-            width: 170px;
-            height: 234px;
-        }
+
 
         .chart_box {
             display: flex;
@@ -49,7 +46,8 @@
             font-size: 18px;
             overflow: hidden;
             white-space: nowrap;
-            text-overflow: ellipsis;        }
+            text-overflow: ellipsis;
+            margin-bottom: 5px;        }
 
         .movie_date {
             float: left;
@@ -58,15 +56,15 @@
 
         .view {
             font-size: 24px;
-            display: inline-block;
             text-align: center;
-            align-self: center;
+            padding-top:80px;
         }
 
         .content_title {
             margin-top: 100px;
             font-size: 30px;
             color: red;
+            text-align: center;
         }
 
         .age{
@@ -80,6 +78,19 @@
         .poster{
             position: relative;
             margin-bottom: 10px;
+        }
+        .movie_no{
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+            background-color: red;
+            color:white;
+            height:25px;
+            width:180px;
+            line-height: 25px;
+        }
+        .chart_box img {
+            width: 180px;
         }
         
     </style>
@@ -116,6 +127,7 @@
         <h3 class="content_title">무비 차트</h3>
         <div class="chart_box">
             <div class="chart_movie">
+                <div class="movie_no">No.1</div>
                 <div class="poster">
                     <img class="age" src="img/12.png"  alt="">
                     <img src="img/탑건.jpg" alt="탑건">
@@ -125,6 +137,7 @@
                 <div class="movie_star">ㅇㅇㅇㅇㅇ</div>
             </div>
             <div class="chart_movie">
+                <div class="movie_no">No.2</div>
                 <div class="poster">
                     <img class="age" src="img/12.png"  alt="">
                     <img src="img/마녀.jpg" alt="마녀">
@@ -134,6 +147,7 @@
                 <div class="movie_star">ㅇㅇㅇㅇㅇ</div>
             </div>
             <div class="chart_movie">
+                <div class="movie_no">No.3</div>
                 <div class="poster">
                     <img class="age" src="img/12.png"  alt="">
                     <img src="img/버즈.jpg" alt="버즈">
