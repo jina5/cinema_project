@@ -5,18 +5,18 @@
     margin: 0 auto;
     padding: 0px;
 }
-ul{
+.member_info_wrap{
     float: right;
     font-size: 0;
     width: 330px;
 }
-li{
+.member_info_wrap > li{
     list-style-type: none;
     text-align: center;
     display: inline-block;
     float: left;
-    margin-top: 70px;
-    margin-left: 25px;
+    margin-top: 50px;
+    margin-left: 15px;
 }
 span{
     font-size: 13px;
@@ -27,4 +27,7 @@ a{
 li img{
     width: 36px;
     height: 36px;
+}
+.logo{
+    margin-top: 20px;
 }
