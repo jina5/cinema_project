@@ -47,8 +47,9 @@
 
         .chart_movie .movie_title {
             font-size: 18px;
-            text-overflow:ellipsis;
-        }
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;        }
 
         .movie_date {
             float: left;
@@ -79,6 +80,7 @@
         }
         .poster{
             position: relative;
+            margin-bottom: 10px;
         }
         
     </style>
@@ -116,8 +118,8 @@
         <div class="chart_box">
             <div class="chart_movie">
                 <div class="poster">
-                    <img class="age" src="/img/12.png"  alt="">
-                    <img src="/img/탑건.jpg" alt="탑건">
+                    <img class="age" src="img/12.png"  alt="">
+                    <img src="img/탑건.jpg" alt="탑건">
                 </div>
                 <div class="movie_title">탑건 - 메버릭</div>
                 <div class="movie_date">2022. 06. 01 개봉</div>
@@ -125,8 +127,8 @@
             </div>
             <div class="chart_movie">
                 <div class="poster">
-                    <img class="age" src="/img/12.png"  alt="">
-                    <img src="/img/마녀.jpg" alt="마녀">
+                    <img class="age" src="img/12.png"  alt="">
+                    <img src="img/마녀.jpg" alt="마녀">
                 </div>
                 <div class="movie_title">마녀(魔女) Part2. The Other One </div>
                 <div class="movie_date">2022. 06. 01 개봉</div>
@@ -134,8 +136,8 @@
             </div>
             <div class="chart_movie">
                 <div class="poster">
-                    <img class="age" src="/img/12.png"  alt="">
-                    <img src="/img/버즈.jpg" alt="버즈">
+                    <img class="age" src="img/12.png"  alt="">
+                    <img src="img/버즈.jpg" alt="버즈">
                 </div>
                 <div class="movie_title">버즈 라이트이어</div>
                 <div class="movie_date">2022. 06. 01 개봉</div>
@@ -144,7 +146,7 @@
             <div class="chart_movie">
                
                 <div class="view">
-                    <img src="/img/right.png" alt="" style="width: 30px; height:30px; ">
+                    <img src="img/right.png" alt="" style="width: 30px; height:30px; ">
                     <br>
                     무비차트<br>전체보기
                 </div>
