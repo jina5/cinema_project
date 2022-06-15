@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/nav.css">
+    <script>
+        window.onload = function(){
+            var nav = document.querySelector('nav');
+            console.log(nav.offsetHeight);       
+            var sub_menu_container = document.querySelector('#sub_menu_container');         
+            var sub_menu_height = sub_menu_container.scrollHeight;
+            sub_menu_height += "px";
+            console.log(sub_menu_height);
+
+            nav.onmouseenter = () => {
+                sub_menu_container.style.height = sub_menu_height;
+            }
+            nav.onmouseleave = () => {
+                sub_menu_container.style.height = "0px";
+            }
+            var sub_menu_li = document.querySelectorAll('#sub_menu_container a');
+            for(i=0;i<sub_menu_li.length;i++){
+                sub_menu_li[i].onclick = () => {
+                    sub_menu_container.style.height = "0px";
+                }
+            }
+        }
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_continer">
+            <div id="header_logo_title_contianer">
+            <div id="header_logo_title">
+                <a href="#"><img src="/img/header_logo.png" alt="메인 페이지"></a>
+                 <h3>CULTUREPLEX</h3>
+            </div>
+            <div id="info">
+                <ul id="member_info_wrap">
+                    <li><a href=""><img src="/test/img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                    <li><a href=""><img src="/test/img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                    <li><a href=""><img src="/test/img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                    <li><a href=""><img src="/test/img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                   </ul>
+            </div>
+        </div>
+        </div>
+    </header>
+    <nav>
+        <ul id="main_menu">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">영화</a></li>
+            <li><a href="#">극장</a></li>
+            <li><a href="#">예매</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li class="serch_bar">|<input id="input" type="text" ></li>
+            <li class="serch_bar_image"><button></button></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="sub_menu_container">
+            <ul >
+                <li></li>
+            </ul>
+            <ul >
+                <li></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">무비차트</a></li>
+                <li><a href="#">영화소개</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">극장정보</a></li>
+                <li><a href="#">상영시간표</a></li>
+                <li><a href="#">관람료</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">상영시간표</a></li>
+                <li><a href="#">예매</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">1:1문의</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</body>
+</html>
