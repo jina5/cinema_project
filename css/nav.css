@@ -1,7 +1,6 @@
 @charset 'utf-8';
-
 nav{
-    width:1920px;
+    width:100%;
     margin: 10px auto;
     border-top:1px solid rgb(210, 210, 210);
     display: flex;
@@ -10,8 +9,8 @@ nav{
 nav ul{
     list-style-type: none;
     padding-inline-start: 0px;
-    margin: 0;
-    padding:0; 
+    /* margin: 0;
+    padding:0;  */
 }
 #main_menu{
     width: 100%;
