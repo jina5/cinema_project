@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/nav.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/footer.css">
+    <script>
+        window.onload = function(){
+            var nav = document.querySelector('nav');
+            console.log(nav.offsetHeight);       
+            var sub_menu_container = document.querySelector('#sub_menu_container');         
+            var sub_menu_height = sub_menu_container.scrollHeight;
+            sub_menu_height += "px";
+            console.log(sub_menu_height);
+
+            nav.onmouseenter = () => {
+                sub_menu_container.style.height = sub_menu_height;
+            }
+            nav.onmouseleave = () => {
+                sub_menu_container.style.height = "0px";
+            }
+            var sub_menu_li = document.querySelectorAll('#sub_menu_container a');
+            for(i=0;i<sub_menu_li.length;i++){
+                sub_menu_li[i].onclick = () => {
+                    sub_menu_container.style.height = "0px";
+                }
+            }
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      section{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        height: 1000px;
+        /* border: 1px solid black;   */
+      }
+      #trailer_container{
+        width: 100%;
+        display: flex;
+      }
+      #left_box{
+        background-color: black;
+        width: 480px;
+        height: 500px;
+      }
+      #right_box{
+        background-color: black;
+        width: 480px;
+        height: 500px;
+        justify-content: space-between;
+      }
+      #trailer_container > video{
+        width: 900px;
+        height: 500px;
+        background-color: black;
+        background: linear-gradient(black, black);
+      }
+      #poster_container{
+        width: 1200px;
+        /* height: 500px; */
+        /* border: 1px solid black; */
+        margin: 0 auto;
+      }
+      #swiper_wrapper{
+        width: 1200px;
+        height: 400px;
+        /* border: 1px solid black; */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #poster_info_container{
+        width: 200px;
+        /* border: 1px solid black; */
+        height: 330px;
+      }
+      #poster_warp{
+        width: 200px;
+        height: 250px;
+        /* border: 1px solid black; */
+        box-sizing: border-box;
+      }
+      #info_warp{
+        width: 200px;
+        height: 80px;
+        /* border: 1px solid black; */
+        box-sizing: border-box;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        text-decoration: none;
+      }
+      #info_warp > a{
+        text-decoration: none;
+        color: black;
+      }
+      #poster_warp > a >img{
+        box-sizing: border-box;
+        width: 200px;
+        height: 250px;
+        border-radius: 15px;
+      }
+      #btn_warp_container{
+        width: 1200px;
+        height: 100px;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: space-between;
+      }
+      #btn_warp{
+        display: table;
+        font-weight: bold;
+        width: 400px;
+        height: 40px;
+        margin-top: 60px;
+      }
+      #btn_warp a{
+        display: table-cell;
+        font-size: 1.8em;
+        text-align: center;
+        vertical-align: bottom;
+        text-decoration: none;
+        color: black;
+      }
+      #btn_warp > span{
+        display: table-cell;
+        color: rgb(109, 106, 106);
+        font-size: 1.5em;
+        vertical-align: middle;
+        
+      }
+      #btn_all_movie{
+        display: table;
+        /* border: 1px solid black; */
+      }
+      #btn_all_movie a{
+        display: table-cell;
+        vertical-align: bottom;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2em;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_continer">
+            <div id="header_logo_title_contianer">
+            <div id="header_logo_title">
+                <a href="#"><img src="/img/header_logo.png" alt="메인 페이지"></a>
+                 <h3>CULTUREPLEX</h3>
+            </div>
+            <div id="info">
+                <ul id="member_info_wrap">
+                    <li><a href=""><img src="/img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                    <li><a href=""><img src="/img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                    <li><a href=""><img src="/img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                    <li><a href=""><img src="/img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                   </ul>
+            </div>
+        </div>
+        </div>
+    </header>
+    <nav>
+        <div id="nav_container">
+        <ul id="main_menu">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">영화</a></li>
+            <li><a href="#">극장</a></li>
+            <li><a href="#">예매</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li class="serch_bar">|<input id="input" type="text" ></li>
+            <li class="serch_bar_image"><button></button></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="sub_menu_container">
+            <ul >
+                <li></li>
+            </ul>
+            <ul >
+                <li></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">무비차트</a></li>
+                <li><a href="#">영화소개</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">극장정보</a></li>
+                <li><a href="#">상영시간표</a></li>
+                <li><a href="#">관람료</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">상영시간표</a></li>
+                <li><a href="#">예매</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">1:1문의</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <section>
+        <div>
+            <article>
+                <div id="trailer_container">
+                    <div id="left_box"></div>
+                    <video src="/video/comeon_1080x608_moviever.mp4" controls loop></video>
+                    <div id="right_box"></div>
+                </div>
+            </article>
+            <article>
+                <div id="poster_container">
+                    <div id="btn_warp_container">
+                        <div id="btn_warp">
+                            <a href="#">상영작</a>
+                            <span>|</span>
+                            <a href="#">상영 예정작</a>
+                        </div>
+                        <div id="btn_all_movie">
+                            <a href="">전체 보기</a>
+                        </div>
+                    </div>
+                    <div id="swiper_wrapper">
+                        <div id="poster_info_container">
+                            <div id="poster_warp">
+                                <a href="#"><img src="/img/범죄도시.jpg" alt=""></a>
+                            </div>
+                            <div id="info_warp">
+                                <a href="#">범죄 도시</a><br>
+                                <span>2022-06-17 개봉</span>
+                                <span>★★★★★</span>
+                            </div>
+                        </div>
+                        <div id="poster_info_container">
+                            <div id="poster_warp">
+                                <a href="#"><img src="/img/경아의딸.jpg" alt=""></a>
+                            </div>
+                            <div id="info_warp">
+                                <a href="#">범죄 도시</a><br>
+                                <span>2022-06-17 개봉</span>
+                                <span>★★★★★</span>
+                            </div>
+                        </div>
+                        <div id="poster_info_container">
+                            <div id="poster_warp">
+                                <a href="#"><img src="/img/마녀.jpg" alt=""></a>
+                            </div>
+                            <div id="info_warp">
+                                <a href="#">범죄 도시</a><br>
+                                <span>2022-06-17 개봉</span>
+                                <span>★★★★★</span>
+                            </div>
+                        </div>
+                        <div id="poster_info_container">
+                            <div id="poster_warp">
+                                <a href="#"><img src="/img/버즈.jpg" alt=""></a>
+                            </div>
+                            <div id="info_warp">
+                                <a href="#">범죄 도시</a><br>
+                                <span>2022-06-17 개봉</span>
+                                <span>★★★★★</span>
+                            </div>
+                        </div>
+                        <div id="poster_info_container">
+                            <div id="poster_warp">
+                                <a href="#"><img src="/img/브로커.jpg" alt=""></a>
+                            </div>
+                            <div id="info_warp">
+                                <a href="#">범죄 도시</a><br>
+                                <span>2022-06-17 개봉</span>
+                                <span>★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </article>    
+        </div>
+    </section>
+    <footer>
+        <div class="footer_container">
+            <div class="logo"><img src="/img/header_logo.png" alt=""></div>
+            <div class="company">
+                <ul>
+                    <li>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
+                    <li>대표이사 : 허민회 | 사업자등록번호 : 104-81-45690 | 통신판매업신고번호 : 2017-서울용산-0662</li>
+                    <li>사업자정보확인 호스팅사업자 CJ올리브네트웍스 CJ올리브네트웍스</li>
+                    <li>개인정보보호 책임자 심준범 대표이메일 cjcgvmaster@cj.net © CJ CGV. All Rights Reserved</li>
+                </ul>
+            </div>
+            <div class="service_center">
+                <ul>
+                    <li>고객센터 : 1544-1122</li>
+                    <li>고객센터 운영시간 (평일 09:00~18:00)</li>
+                    <li>업무시간 외 자동응답 안내 가능합니다.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
