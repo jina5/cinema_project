@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/header.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/nav.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/footer.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/header.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/theater.css">
+
     <script>
         window.onload = function(){
             var nav = document.querySelector('nav');
@@ -26,36 +28,42 @@
             var sub_menu_li = document.querySelectorAll('#sub_menu_container a');
             for(i=0;i<sub_menu_li.length;i++){
                 sub_menu_li[i].onclick = () => {
-                    sub_menu_container.style.height = "0px";
+                    sub_menu_container.style.height = "0px";}
+            var seoul = document.querySelector('.seoul');
+            var seoul_menu = document.getElementById('seoul');
+            var gg = document.querySelector('.gg');
+            var gg_menu = document.getElementById('gg');
+            seoul.onmouseenter = () =>{
+                seoul_menu.style.height='150px';
+                seoul_menu.style.display='';
+                gg_menu.style.height='0px';
+                gg_menu.style.overflow='hidden';
+            }
+            gg.onmouseenter = () =>{
+                gg_menu.style.height='150px';
+                gg_menu.style.display='';
+                seoul_menu.style.height='0px';
+                seoul_menu.style.overflow='hidden';
+            }
                 }
             }
-        }
+        
     </script>
-    <style>
-      section{
-        width: 1200px;
-        margin: 0 auto;
-        padding: 0;
-        height: 600px;
-        border: 1px solid black;  
-      }
-      
-    </style>
 </head>
 <body>
     <header>
         <div class="header_continer">
             <div id="header_logo_title_contianer">
             <div id="header_logo_title">
-                <a href="#"><img src="/img/header_logo.png" alt="메인 페이지"></a>
+                <a href="#"><img src="img/header_logo.png" alt="메인 페이지"></a>
                  <h3>CULTUREPLEX</h3>
             </div>
             <div id="info">
                 <ul id="member_info_wrap">
-                    <li><a href=""><img src="/img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
-                    <li><a href=""><img src="/img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
-                    <li><a href=""><img src="/img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
-                    <li><a href=""><img src="/img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                    <li><a href=""><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                    <li><a href=""><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                    <li><a href=""><img src="img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                    <li><a href=""><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
                    </ul>
             </div>
         </div>
@@ -103,12 +111,24 @@
     </div>
     </nav>
     <section>
-        <div>
-        </div>
+        <div class="all_theater_container">
+        <ul class="theater_menu"><li class="seoul">서울</li><li class="gg">경기</li></ul>
+        <ul class = "theater_sub_menu">
+        <ul id="seoul">
+            <li><a href="#">강남</a></li> 
+            <li><a href="#">신촌</a></li> 
+            <li><a href="#">홍대</a></li> 
+        </ul>
+        <ul id="gg">
+            <li><a href="#">수원</a></li> 
+            <li><a href="#">동탄</a></li> 
+        </ul></ul>
+    </ul>
+</div>
     </section>
     <footer>
         <div class="footer_container">
-            <div class="logo"><img src="/img/header_logo.png" alt=""></div>
+            <div class="logo"><img src="img/header_logo.png" alt=""></div>
             <div class="company">
                 <ul>
                     <li>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
