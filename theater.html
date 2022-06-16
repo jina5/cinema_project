@@ -33,25 +33,25 @@
             var seoul_menu = document.getElementById('seoul');
             var gg = document.querySelector('.gg');
             var gg_menu = document.getElementById('gg');
-            seoul.onmouseenter = () =>{
+            seoul.onclick = () =>{
                 seoul_menu.style.height='150px';
                 seoul_menu.style.display='';
                 seoul.style.backgroundColor='#fb4357';
                 gg_menu.style.height='0px';
                 gg_menu.style.overflow='hidden';
-                gg.style.backgroundColor='';
+                gg.style.backgroundColor='rgb(224,224,224)';
             }
-            gg.onmouseenter = () =>{
+            gg.onclick = () =>{
                 gg_menu.style.height='150px';
                 gg_menu.style.display='';
                 gg.style.backgroundColor='#fb4357';
                 seoul_menu.style.height='0px';
                 seoul_menu.style.overflow='hidden';
-                seoul.style.backgroundColor='';
+                seoul.style.backgroundColor='rgb(224,224,224)';
             }
                 }
             }
-        
+            
     </script>
 </head>
 <body>
@@ -119,13 +119,13 @@
         <ul class="theater_menu"><li class="seoul">서울</li><li class="gg">경기</li></ul>
         <ul class = "theater_sub_menu">
         <ul id="seoul">
-            <li><a href="#">강남</a></li> 
-            <li><a href="#">신촌</a></li> 
-            <li><a href="#">홍대</a></li> 
+            <li id="seoul1"><a href="#">강남</a></li> 
+            <li id="seoul2"><a href="#">신촌</a></li> 
+            <li id="seoul3"><a href="#">홍대</a></li> 
         </ul>
         <ul id="gg">
-            <li><a href="#">수원</a></li> 
-            <li><a href="#">동탄</a></li> 
+            <li id="gg1"><a href="#">수원</a></li> 
+            <li id="gg2"><a href="#">동탄</a></li> 
         </ul></ul>
     </ul>
 </div>
