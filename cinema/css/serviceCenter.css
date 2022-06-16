@@ -2,10 +2,10 @@
 .service_container {
 width: 1200px;
 margin: 0 auto;
-border: 1px solid black;
+/* border: 1px solid black; */
 display: flex;
 /* flex-direction: row; */
-/* justify-content: space-between; */
+justify-content: center;
 }
 .h2 {
 width: 150px;
@@ -19,12 +19,15 @@ color: #fb4357;
 width: 300px;
 height: 400px;
 /* border: 1px solid black; */
-margin-top: 100px;
+margin-top: 50px;
 margin-bottom: 100px;
 }
 .margin_1 {
 margin-right: 50px;
 margin-left: 50px;
+}
+.margin_2 {
+    margin-top: 100px;
 }
 .search_color {
 background-color: #fb4357;
@@ -149,4 +152,8 @@ border-top: 4px solid gray;
 .menuBar ul li a:hover {
 background-color: rgb(224, 224, 224);
 color: blue;
+}
+.fontBox {
+    height: 40px;
+    padding-top: 15px;
 }
