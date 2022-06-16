@@ -31,7 +31,11 @@ section{
     list-style-type: none;
 }
 .seoul{
+    border-top-left-radius: 20px;
     border-bottom: 1px solid black;
+}
+.gg{
+    border-bottom-left-radius: 20px;
 }
 .theater_menu li {
     box-sizing: border-box;
