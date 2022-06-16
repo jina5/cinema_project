@@ -52,6 +52,9 @@ nav li{
     transition-property: all;
     transition-duration: 1s;
     border-bottom:1px solid red;
+    position: absolute;
+    z-index:1000;
+    background-color: white;
 }
 .serch_bar{
     display: flex;
