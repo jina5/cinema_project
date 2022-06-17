@@ -103,3 +103,8 @@
     width: 20px;
     height: 20px;
 }
+.fix {
+    position: fixed;
+    top: 300px;
+    left: 250px;
+}
