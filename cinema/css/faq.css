@@ -1,0 +1,105 @@
+@charset 'utf-8';
+.faq_main_container {
+    width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+.h2 {
+    padding-top: 30px;
+    padding-left: 150px;
+    color: #fb4357;
+}
+.search_container {
+    width: 900px;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid black;
+}
+.search {
+    padding-left: 30px;
+}
+.search span {
+    font-size: 18px;
+    font-weight: bold;
+}
+.search_container div input {
+    width: 400px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 18px;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.search_img {
+    width: 50px;
+    height: 40px;
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.search_img img {
+    height: 40px;
+}
+.faq_sub_container {
+    width: 900px;
+    margin-top: 40px;
+    margin-left: 150px;
+    border-top: 1px solid black;
+}
+.mainMenu {
+    display: flex;
+    flex-direction: column;
+}
+.mainMenu a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    color: black;
+    border-top: 1px solid gray;
+}
+.subMenu {
+    /* padding: 20px 30px; */
+    height: 0px;
+    background-color: rgba(235, 235, 235);
+    /* display: none; */
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: 1s;
+}
+.mainMenu li, .subMenu li{
+    margin-top: 10px;
+}
+.mainmenu_line {
+    line-height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.mainmenu_line:hover {
+    background-color: rgb(245, 245, 245);
+}
+.faqNum {
+    color: rgb(0, 168, 168);
+}
+.faq_Q {
+    color: #fb4357;
+}
+.btn {
+    margin-top: 20px;
+    margin-right: 50px;
+    height: 20px;
+    background-color: rgb(230, 230, 230);
+    border: none;
+    cursor: pointer;
+}
+.btn img {
+    width: 20px;
+    height: 20px;
+}

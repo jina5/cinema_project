@@ -1,16 +1,9 @@
 @charset 'utf-8';
-
-@charset 'utf-8';
-footer{
-    display: flex;
-    width: 100%;
-    background-color: rgb(200, 200, 200);
-}
 .footer_container {
     width: 1200px;
     height: 150px;
     margin: 0 auto;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     background-color: rgb(200, 200, 200);
     display: flex;
     flex-direction: row;
@@ -29,12 +22,9 @@ footer{
     width: 600px;
     margin-top: 70px;
     /* border: 1px solid black; */
-    font-size: 12px;
-    margin-top: 30px;
-    
+    font-size: 12px
 }
 .company ul {
-    margin-top: 10px;
     list-style-type: none;
 }
 .service_center {
@@ -48,5 +38,36 @@ footer{
 .service_center ul li {
     margin-top: 10px;
 }
-
-
+.list_none {
+    list-style-type: none;
+}
+.quick_menu {
+    width: 300px;
+    height: 60px;
+    bottom: 100px;
+    right: 250px;
+    position: fixed;
+    /* border: 1px solid black; */
+}
+.quick_menu ul {
+    list-style-type: none;
+    display: inline-block;
+}
+.hidden {
+    height: 0px;
+    overflow: hidden;
+}
+.quick_menu li:hover {
+    background-color: rgb(255, 182, 182);
+    transition-duration: 1s;
+}
+.quick_menu li:hover .hidden {
+    height: 50px;
+    transition-duration: 1s;
+}
+.quick_menu li {
+    float: right;
+    padding-right: 15px;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
