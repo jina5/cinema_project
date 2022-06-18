@@ -12,12 +12,11 @@
 
     <script>
         window.onload = function(){
+//-----------------헤더
             var nav = document.querySelector('nav');
-            console.log(nav.offsetHeight);       
             var sub_menu_container = document.querySelector('#sub_menu_container');         
             var sub_menu_height = sub_menu_container.scrollHeight;
             sub_menu_height += "px";
-            console.log(sub_menu_height);
 
             nav.onmouseenter = () => {
                 sub_menu_container.style.height = sub_menu_height;
@@ -28,13 +27,14 @@
             var sub_menu_li = document.querySelectorAll('#sub_menu_container a');
             for(i=0;i<sub_menu_li.length;i++){
                 sub_menu_li[i].onclick = () => {
-                    sub_menu_container.style.height = "0px";}
+                    sub_menu_container.style.height = "0px";}}
+//-----------------섹션
             var seoul = document.querySelector('.seoul');
             var seoul_menu = document.getElementById('seoul');
             var gg = document.querySelector('.gg');
             var gg_menu = document.getElementById('gg');
             seoul.onclick = () =>{
-                seoul_menu.style.height='150px';
+                seoul_menu.style.height='100px';
                 seoul_menu.style.display='';
                 seoul.style.backgroundColor='#fb4357';
                 gg_menu.style.height='0px';
@@ -42,15 +42,87 @@
                 gg.style.backgroundColor='rgb(224,224,224)';
             }
             gg.onclick = () =>{
-                gg_menu.style.height='150px';
+                gg_menu.style.height='100px';
                 gg_menu.style.display='';
                 gg.style.backgroundColor='#fb4357';
                 seoul_menu.style.height='0px';
                 seoul_menu.style.overflow='hidden';
                 seoul.style.backgroundColor='rgb(224,224,224)';
             }
+//--------- 극장 누르면 빨간색으로.. (한번에 처리 )
+            var theater_li = document.querySelectorAll('.theater_sub_menu ul li a');
+            theater_li[0].onclick = () => {
+                for(i=0;i<theater_li.length;i++){
+                    theater_li[i].style.color='';
                 }
+                theater_li[0].style.color='#fb4357';
             }
+            theater_li[1].onclick = () => {
+                for(i=0;i<theater_li.length;i++){
+                    theater_li[i].style.color='';
+                }
+                theater_li[1].style.color='#fb4357';
+            }
+            theater_li[2].onclick = () => {
+                for(i=0;i<theater_li.length;i++){
+                    theater_li[i].style.color='';
+                }
+                theater_li[2].style.color='#fb4357';
+            }
+            theater_li[3].onclick = () => {
+                for(i=0;i<theater_li.length;i++){
+                    theater_li[i].style.color='';
+                }
+                theater_li[3].style.color='#fb4357';
+            }
+            theater_li[4].onclick = () => {
+                for(i=0;i<theater_li.length;i++){
+                    theater_li[i].style.color='';
+                }
+                theater_li[4].style.color='#fb4357';
+            }
+        
+//----------------극장정보 상영시간표 관람료
+            var detail_menu = document.querySelectorAll('.theater_detail_menu li a');
+            console.log(detail_menu.length);
+            detail_menu[0].style.color='red';
+            detail_menu[0].style.fontWeight='bold';
+            detail_menu[0].style.fontSize='23px';
+
+            detail_menu[0].onclick = () => {
+                for(i=0;i<detail_menu.length;i++){
+                    detail_menu[i].style.color='';
+                    detail_menu[i].style.fontWeight='';
+                    detail_menu[i].style.fontSize='';
+                }
+                detail_menu[0].style.color='#fb4357';
+                detail_menu[0].style.fontWeight='bold';
+                detail_menu[0].style.fontSize='23px';
+            }
+            detail_menu[1].onclick = () => {
+                for(i=0;i<detail_menu.length;i++){
+                    detail_menu[i].style.color='';
+                    detail_menu[i].style.fontWeight='';
+                    detail_menu[i].style.fontSize='';
+
+                }
+                detail_menu[1].style.color='#fb4357';
+                detail_menu[1].style.fontWeight='bold';
+                detail_menu[1].style.fontSize='23px';
+            }
+            detail_menu[2].onclick = () => {
+                for(i=0;i<detail_menu.length;i++){
+                    detail_menu[i].style.color='';
+                    detail_menu[i].style.fontWeight='';
+                    detail_menu[i].style.fontSize='';
+
+                }
+                detail_menu[2].style.color='#fb4357';
+                detail_menu[2].style.fontWeight='bold';
+                detail_menu[2].style.fontSize='23px';
+            }     
+                }
+            
             
     </script>
 </head>
@@ -119,16 +191,130 @@
         <ul class="theater_menu"><li class="seoul">서울</li><li class="gg">경기</li></ul>
         <ul class = "theater_sub_menu">
         <ul id="seoul">
-            <li id="seoul1"><a href="#">강남</a></li> 
-            <li id="seoul2"><a href="#">신촌</a></li> 
-            <li id="seoul3"><a href="#">홍대</a></li> 
+            <li class="seoul_li"><a href="#">강남</a></li> 
+            <li class="seoul_li"><a href="#">신촌</a></li> 
+            <li class="seoul_li"><a href="#">홍대</a></li> 
         </ul>
         <ul id="gg">
-            <li id="gg1"><a href="#">수원</a></li> 
-            <li id="gg2"><a href="#">동탄</a></li> 
+            <li class="gg_li"><a href="#">수원</a></li> 
+            <li class="gg_li"><a href="#">동탄</a></li> 
         </ul></ul>
     </ul>
 </div>
+<div class="theater_detail_container">
+<ul class = "theater_detail_menu">
+    <li><a href="#" title="극장정보 탭으로 이동">극장정보</a></li>
+    <li><a href="#" title="상영시간표 탭으로 이동">상영시간표</a></li>
+    <li><a href="#" title="관람료 탭으로 이동">관람료</a></li>
+</ul>
+</div>
+<div id="tab1">
+<div class="theater_info">
+    <div class="theater_info_title">
+        <img src="img/theater3.jpeg" alt="">
+            <p class="big">
+                강남의 중심! <br>
+                강남 소비문화의 중심지인 지하철 2호선 , 신분당선  - 강남역과 연결<br>
+                로맨틱 멀티플렉스!<br>젊은 도시 강남이 한 눈에 보이는 최상의 View를 제공
+            </p>
+            <p>&lt;프라다&gt;가 선택한 수려한 디자인의 상영관 의자를 체험해보세요!</p>
+            <br>
+        </div>
+        <h2 class="red">시설안내</h2>   
+        <h3>보유시설</h3>
+        <div class="theater_facility">
+        <div><img src="img/일반상영관.png" class="theater_icon"><br>일반상영관</div>             
+        <div><img src="img/3d.png" class="theater_icon"><br>일반상영관</div>              
+        <div><img src="img/장애인석.png" class="theater_icon" ><br>장애인석</div>
+        </div>
+        <h3>층별안내</h3>
+        <div class="theater_facility">
+        <ul>
+                <li><span class="blue">8층 : </span> 매표소, 매점, 에스컬레이터, 엘리베이터 , 남자 · 여자 화장실, 비상계단 3 </li> 
+                <li><span class="blue">9층 : </span> 1관, 2관, 남자 · 여자 화장실, 엘리베이터, 비상계단3</li>
+                <li><span class="blue">10층 : </span> 3관, 4관, 엘리베이터2, 남자 · 여자 화장실, 비상계단 3 </li>
+                <li><span class="blue">11층 : </span> 5관, 6관, 7관, 엘리베이터2, 남자 · 여자 화장실, 비상계단 3 </li>  
+                <br>        
+        </ul>
+    </div>
+    
+    
+    <h2 class="red">교통안내</h2>
+    <h3>약도</h3>
+    <ul>
+        <li><span class="blue">도로명주소 : </span> 서울 서초구 서초대로77길 3 아라타워 8층 메가박스 강남지점</li>
+    </ul>
+    <!--지도-->
+    <div id="map" style="width:100%;height:350px;"></div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3d48db5ba4dab4254c81fb72c0907d72
+"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+// 마커가 표시될 위치입니다 
+var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map); 
+</script>
+  
+        <h3>주차</h3>
+        <div class="parking_container">
+        <div class="parking">
+                    <img src="img/parking.png" alt="" class="theater_icon">
+                        <ul>
+                            <li><p class="blue">주차안내</p></li>
+                                <li>아라타워 건물 內 지하 3층 ~ 지하 6층 주차장 이용</li>
+                        </ul>
+                    </div>
+                    <div class="parking">
+                        <img src="img/car.png" alt="" class="theater_icon">
+                            <ul>
+                                <li><p class="blue">주차확인</p></li>
+                                    <li>표소에서 당일 관람 티켓 인증 후, 차량 번호 할인 등록하여 지하 정산소에서 결제</li>
+                            </ul>
+                        </div>
+                    <div class="parking">
+                        <img src="img/시계.png" alt="" class="theater_icon">
+                                <ul>
+                                    <li><p class="blue">주차요금</p></li>
+                                    <li>주차 요금은 입차시간을 기준으로 합니다.</li>
+                                    <li>영화 관람 시 3시간 → 3,000원(3시간 초과 시 10분당 1,000원 부과, 초과비용 출차 시 정산)</li>
+                                    <li>건물 내 타 매장과 주차 할인 중복 적용 불가.</li>
+                                    <li>입차시 최대 3시간 30분까지 할인 가능(차량 1대에 주차 할인 적용 2회 이상 불가)</li>
+                                    <li>주차 공간이 협소하므로 가급적이면 대중교통을 이용 바랍니다. (지하철 2호선 강남역 출구 9번 출구)</li>
+                                </ul>
+                            </div>          
+                            </div>          
+    <!--교통-->  
+    <br>
+    <h3>대중교통</h3>    
+    <div class="transportation_container">
+                <div class="transportation">
+                        <img src="img/bus.png" alt="" class="theater_icon">
+                            <ul>
+                                <li><p class="blue">버스</p></li>
+                                <li>140번, 144번, 145번, 146번, 360번, 402번, 420번, 440번, 441번, 452번, 470번, 741번</li>
+                                <li>3412번, 4312번, 서초03번, 서초 09번 </li>
+                                <li>9404번, 9408번, 9409번, 9503번, 9711번, 9500번, 9501번, 9510번, 9800번, 9801번, 9802번, 9901번, M4403번, M7412번</li>
+                        </ul>
+                </div>        
+                <div class="transportation">
+                    <img src="img/subway.png" alt="" class="theater_icon">
+                        <ul>
+                            <li><p class="blue">지하철</p></li>
+                            <li>지하철 2호선 , 신분당선 ‘강남역 -&gt; 지하철 9번(구 5번) 출구 좌측 연결통로 이용</li>
+                            </ul>
+            </div> 
+        </div>
+        
     </section>
     <footer>
         <div class="footer_container">
