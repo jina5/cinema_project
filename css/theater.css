@@ -21,10 +21,12 @@ section{
     margin: 50px auto;
 }
 .theater_menu{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgb(224,224,224);
     box-sizing: border-box;
     width: 250px;
     font-size: 20px;
-    border-right: 2px solid rgb(224,224,224);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -80,8 +82,8 @@ section{
 }
 .theater_detail_menu{
     margin: auto;
-    width:800px;
-    height: 50px;
+    width:1200px;
+    height: 70px;
 }
 .theater_detail_menu li{
     padding: 10px;
@@ -92,7 +94,8 @@ section{
     border-collapse: collapse;
 }
 .theater_detail_menu li a{
-    font-size: 18px;
+    line-height: 50px;
+    font-size: 20px;
     text-decoration: none;
     color:black;
     transition: all;
