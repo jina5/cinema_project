@@ -35,36 +35,19 @@
         *{
             margin: 0;
             padding: 0;
-            /* border: 1px solid black; */
+            /* border:  1px solid black; */
+        }
+        footer{
+            margin-top: 400px;
         }
       section{
-        width: 100%;
+        width: 1200px;
         margin: 0 auto;
         padding: 0;
-        height: 1000px;
+        height: 600px;
         /* border: 1px solid black;   */
       }
-      #trailer_container{
-        width: 100%;
-        display: flex;
-      }
-      #left_box{
-        background-color: black;
-        width: 480px;
-        height: 500px;
-      }
-      #right_box{
-        background-color: black;
-        width: 480px;
-        height: 500px;
-        justify-content: space-between;
-      }
-      #trailer_container > video{
-        width: 900px;
-        height: 500px;
-        background-color: black;
-        background: linear-gradient(black, black);
-      }
+
       #poster_container{
         width: 1200px;
         /* height: 700px; */
@@ -111,51 +94,34 @@
         /* height: 250px; */
         border-radius: 15px;
       }
-      #btn_warp_container{
-        width: 1200px;
-        /* height: 100px; */
+      #movie_chart_title{
+
         /* border: 1px solid black; */
-        display: flex;
-        justify-content: space-between;
-      }
-      #btn_warp{
-        display: table;
-        font-weight: bold;
-        width: 400px;
-        /* height: 40px; */
-        margin-top: 60px;
-      }
-      #btn_warp a{
-        display: table-cell;
-        font-size: 1.8em;
-        text-align: center;
-        vertical-align: bottom;
-        text-decoration: none;
-        color: black;
-      }
-      #btn_warp > span{
-        display: table-cell;
-        color: rgb(109, 106, 106);
-        font-size: 1.5em;
-        vertical-align: middle;
-        
-      }
-      #btn_all_movie{
-        display: table;
-        /* border: 1px solid black; */
-      }
-      #btn_all_movie a{
-        display: table-cell;
-        vertical-align: bottom;
-        text-decoration: none;
-        color: black;
-        font-size: 1.2em;
+        font-size: 1.3em;
+        color: #fb4357;
+        margin: 15px 0px 15px;
       }
       #middle_baaner{
         text-align: center;
+        height: 90px;
         background-color: rgb(34, 34, 34);
         width: 100%;
-        margin-top: 25px;
+        margin-top: 40px;
+        margin-bottom: 25px;
+      }
+      #btn_Ticketing{
+        font-size: 0.9em;
+        background-color: #fb4357;
+        border-radius: 5px;
+        border: 0px;
+        width: 90px;
+        height: 30px;
+        color: white;
+        vertical-align: middle;
+      }
+      #btn_Ticketing > a{
+        text-decoration: none;
+        color: white;
       }
     </style>
 </head>
@@ -181,7 +147,7 @@
     <nav>
         <div id="nav_container">
         <ul id="main_menu">
-            <li><a href="#"></a></li>
+          
             <li><a href="#"></a></li>
             <li><a href="#">영화</a></li>
             <li><a href="#">극장</a></li>
@@ -193,12 +159,8 @@
             <li></li>
         </ul>
         <div id="sub_menu_container">
-            <ul >
-                <li></li>
-            </ul>
-            <ul >
-                <li></li>
-            </ul>
+            
+            
             <ul class="sub_menu">
                 <li><a href="#">무비차트</a></li>
                 <li><a href="#">영화소개</a></li>
@@ -219,27 +181,14 @@
         </div>
     </div>
     </nav>
+
     <section>
-        <div>
-            <article>
-                <div id="trailer_container">
-                    <div id="left_box"></div>
-                    <video src="/video/comeon_1080x608_moviever.mp4" controls loop></video>
-                    <div id="right_box"></div>
-                </div>
-            </article>
+        <div id="movie_chart_container">
+            <div id="movie_chart_title">
+            <h1>무비차트</h1>
+        </div>
             <article>
                 <div id="poster_container">
-                    <div id="btn_warp_container">
-                        <div id="btn_warp">
-                            <a href="#">상영작</a>
-                            <span>|</span>
-                            <a href="#">상영 예정작</a>
-                        </div>
-                        <div id="btn_all_movie">
-                            <a href="">전체 보기</a>
-                        </div>
-                    </div>
                     <div id="swiper_wrapper">
                         <div id="poster_info_container">
                             <div id="poster_warp">
@@ -249,6 +198,7 @@
                                 <a href="#">범죄 도시</a><br>
                                 <span>2022-06-17 개봉</span>
                                 <span>★★★★★</span>
+                                <button id="btn_Ticketing"><a href="#">예매하기</a></button>
                             </div>
                         </div>
                         <div id="poster_info_container">
@@ -259,6 +209,7 @@
                                 <a href="#">범죄 도시</a><br>
                                 <span>2022-06-17 개봉</span>
                                 <span>★★★★★</span>
+                                <button id="btn_Ticketing"><a href="#">예매하기</a></button>
                             </div>
                         </div>
                         <div id="poster_info_container">
@@ -269,6 +220,7 @@
                                 <a href="#">범죄 도시</a><br>
                                 <span>2022-06-17 개봉</span>
                                 <span>★★★★★</span>
+                                <button id="btn_Ticketing"><a href="#">예매하기</a></button>
                             </div>
                         </div>
                         <div id="poster_info_container">
@@ -279,6 +231,7 @@
                                 <a href="#">범죄 도시</a><br>
                                 <span>2022-06-17 개봉</span>
                                 <span>★★★★★</span>
+                                <button id="btn_Ticketing"><a href="#">예매하기</a></button>
                             </div>
                         </div>
                         <div id="poster_info_container">
@@ -289,16 +242,77 @@
                                 <a href="#">범죄 도시</a><br>
                                 <span>2022-06-17 개봉</span>
                                 <span>★★★★★</span>
+                                <button id="btn_Ticketing"><a href="#">예매하기</a></button>
                             </div>
                         </div>
                     </div>
-                </div>    
-            </article> 
+                </div> 
+
+            </article>
+            <div id="middle_baaner">
+                <a href="#"><img src="/img/middle_banner.png" alt=""></a>
+            </div>
             <article>
-                <div id="middle_baaner">
-                    <a href="#"><img src="/img/middle_banner.png" alt=""></a>
-                </div>
-            </article>   
+                <div id="poster_container">
+                    <div id="swiper_wrapper">
+                        <div id="poster_info_container">
+                            <div id="poster_warp">
+                                <a href="#"><img src="/img/범죄도시.jpg" alt=""></a>
+                            </div>
+                            <div id="info_warp">
+                                <a href="#">범죄 도시</a><br>
+                                <span>2022-06-17 개봉</span>
+                                <span>★★★★★</span>
+                                <button id="btn_Ticketing"><a href="#">예매하기</a></button>
+                            </div>
+                        </div>
+                        <div id="poster_info_container">
+                            <div id="poster_warp">
+                                <a href="#"><img src="/img/경아의딸.jpg" alt=""></a>
+                            </div>
+                            <div id="info_warp">
+                                <a href="#">범죄 도시</a><br>
+                                <span>2022-06-17 개봉</span>
+                                <span>★★★★★</span>
+                                <button id="btn_Ticketing"><a href="#">예매하기</a></button>
+                            </div>
+                        </div>
+                        <div id="poster_info_container">
+                            <div id="poster_warp">
+                                <a href="#"><img src="/img/마녀.jpg" alt=""></a>
+                            </div>
+                            <div id="info_warp">
+                                <a href="#">범죄 도시</a><br>
+                                <span>2022-06-17 개봉</span>
+                                <span>★★★★★</span>
+                                <button id="btn_Ticketing"><a href="#">예매하기</a></button>
+                            </div>
+                        </div>
+                        <div id="poster_info_container">
+                            <div id="poster_warp">
+                                <a href="#"><img src="/img/버즈.jpg" alt=""></a>
+                            </div>
+                            <div id="info_warp">
+                                <a href="#">범죄 도시</a><br>
+                                <span>2022-06-17 개봉</span>
+                                <span>★★★★★</span>
+                                <button id="btn_Ticketing"><a href="#">예매하기</a></button>
+                            </div>
+                        </div>
+                        <div id="poster_info_container">
+                            <div id="poster_warp">
+                                <a href="#"><img src="/img/브로커.jpg" alt=""></a>
+                            </div>
+                            <div id="info_warp">
+                                <a href="#">범죄 도시</a><br>
+                                <span>2022-06-17 개봉</span>
+                                <span>★★★★★</span>
+                                <button id="btn_Ticketing"><a href="#">예매하기</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </article>
         </div>
     </section>
     <footer>
