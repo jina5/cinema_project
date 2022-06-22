@@ -45,6 +45,9 @@
                 gg_menu.style.height = '0px';
                 gg_menu.style.overflow = 'hidden';
                 gg.style.backgroundColor = 'rgb(224,224,224)';
+                theater_li[0].style.color = '#fb4357';
+                theater_li[1].style.color = '';
+                theater_li[2].style.color = '';
             }
             gg.onclick = () => {
                 gg_menu.style.height = '100px';
@@ -55,9 +58,12 @@
                 seoul_menu.style.height = '0px';
                 seoul_menu.style.overflow = 'hidden';
                 seoul.style.backgroundColor = 'rgb(224,224,224)';
+                theater_li[3].style.color = '#fb4357';
+                theater_li[4].style.color = '';
             }
             //--------- 극장 누르면 빨간색으로.. (한번에 처리 )
             var theater_li = document.querySelectorAll('.theater_sub_menu ul li a');
+            theater_li[0].style.color = '#fb4357';
             theater_li[0].onclick = () => {
                 for (i = 0; i < theater_li.length; i++) {
                     theater_li[i].style.color = '';
@@ -92,11 +98,10 @@
             //----------------극장정보 상영시간표 관람료
             var detail_menu = document.querySelectorAll('.theater_detail_menu li a');
             var detail = document.querySelectorAll('.theater_detail_menu li');
-            console.log(detail_menu.length);
-            detail_menu[1].style.color = 'white';
-            detail_menu[1].style.fontWeight = 'bold';
-            detail_menu[1].style.fontSize = '23px';
-            detail[1].style.backgroundColor = '#fb4357';
+            detail_menu[2].style.color = 'white';
+            detail_menu[2].style.fontWeight = 'bold';
+            detail_menu[2].style.fontSize = '23px';
+            detail[2].style.backgroundColor = '#fb4357';
 
             detail_menu[0].onclick = () => {
                 for (i = 0; i < detail_menu.length; i++) {
@@ -136,38 +141,8 @@
                 detail_menu[2].style.fontWeight = 'bold';
                 detail_menu[2].style.fontSize = '23px';
                 detail[2].style.backgroundColor = '#fb4357';
+
             }
-
-            var today = new Date();
-            var tag = `<h2>${today.getMonth() + 1}월 상영 시간표</h2>`;
-            tag += `<table><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr>`;
-
-            var startDate = new Date(today.getFullYear(), today.getMonth(), 1); //6월 1일
-            var endDate = new Date(today.getFullYear(), today.getMonth() + 1, 0); //6월 30일
-
-            startDate.setDate(startDate.getDate() - startDate.getDay()); //5월 29일
-            endDate.setDate(endDate.getDate() + (6 - endDate.getDay())); // 7월 2일
-
-            var line = (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 7);
-            for (i = 0; i < line; i++) {
-                tag += '<tr>';
-                for (j = 0; j < 7; j++) {
-                    if (startDate.getDate() == today.getDate())
-                        tag += `<td class='today'><a href='#'>${startDate.getDate()} <br> 오늘 </a></td>`;
-                    else if (startDate.getDate() == today.getDate() + 1)
-                        tag += `<td class='tomorrow'><a href='#'>${startDate.getDate()} <br> 내일 </a></td>`;
-                    else if (startDate.getMonth() == today.getMonth())
-                        tag += `<td><a href='#'>${startDate.getDate()}</a></td>`;
-                    else
-                        tag += `<td class='disable'><a href='#'>${startDate.getDate()}</a></td>`;
-                    startDate.setDate(startDate.getDate() + 1);
-                }
-                tag += '</tr>';
-            }
-            tag += '</table>';
-            var cal = document.querySelector('.calender');
-            cal.innerHTML = tag;
-
         }
 
 
@@ -260,91 +235,102 @@
                 <li><a href="/theater_price.html" title="관람료 탭으로 이동">관람료</a></li>
             </ul>
         </div>
-        <div id="tab2">
-            <div class="theater_timetable">
-                <div class="calender">
+        <div id="tab3">
+            <div class="theater_price">
+                <h2 class="red">영화관람료</h2>
+                <div class="price_menu">
+                    <table>
+                        <p>2D</p>
+                        <th>요일</th>
+                        <th>상영시간</th>
+                        <th>일반</th>
+                        <th>청소년</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">월~목</th>
+                            <td>조조 (06:00~)</td>
+                            <td>9,000</td>
+                            <td>7,000</td>
+                        </tr>
+                        <tr>
+                            <td>일반 (10:01~)</td>
+                            <td>13,000</td>
+                            <td>11,000</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">금~일<br>공휴일</th>
+                            <td>조조 (06:00~)</td>
+                            <td>10,000</td>
+                            <td>8,000</td>
+                        </tr>
+                        <tr>
+                            <td>일반 (10:01~)</td>
+                            <td>14,000</td>
+                            <td>12,000</td>
+                        </tr>
+                    </table>
                 </div>
-                    <div class="theater_list">
-                        <div class="theater_title">
-                            <img src="img/car.png" class="age_icon" alt="">
-                            <p><a href='#'>마녀(魔女) Part2. The Other One</a></p>
-                        </div>
-                        <div class="theater_list_box">
-                                <table class="theater_list">
-                                    <tr>
-                                        <th>MX관<div class="chair">총 279석</div></th> 
-                                        <th>2D</th>
-                                        <td>06:00</td>
-                                        <td>09:00</td>
-                                        <td>12:00</td>
-                                    </tr>
-                                </table>
-                                <table class="theater_list">
-                                    <tr>
-                                        <th>5관<div class="chair">총 279석</div></th> 
-                                        <th>2D</th>
-                                        <td>11:00</td>
-                                        <td>14:00</td>
-                                        <td>19:00</td>
-                                        <td>22:00</td>
-                                        <td>00:00</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="theater_title">
-                                <img src="img/car.png" class="age_icon" alt="">
-                                <p><a href='#'>마녀(魔女) Part2. The Other One</a></p>
-                            </div>
-                            <div class="theater_list_box">
-                                    <table class="theater_list">
-                                        <tr>
-                                            <th>MX관<div class="chair">총 279석</div></th> 
-                                            <th>2D</th>
-                                            <td>06:00</td>
-                                            <td>09:00</td>
-                                            <td>12:00</td>
-                                        </tr>
-                                    </table>
-                                    <table class="theater_list">
-                                        <tr>
-                                            <th>5관<div class="chair">총 279석</div></th> 
-                                            <th>2D</th>
-                                            <td>11:00</td>
-                                            <td>14:00</td>
-                                            <td>19:00</td>
-                                            <td>22:00</td>
-                                            <td>00:00</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="theater_title">
-                                    <img src="img/car.png" class="age_icon" alt="">
-                                    <p><a href='#'>마녀(魔女) Part2. The Other One</a></p>
-                                </div>
-                                <div class="theater_list_box">
-                                        <table class="theater_list">
-                                            <tr>
-                                                <th>MX관<div class="chair">총 279석</div></th> 
-                                                <th>2D</th>
-                                                <td>06:00</td>
-                                                <td>09:00</td>
-                                                <td>12:00</td>
-                                            </tr>
-                                        </table>
-                                        <table class="theater_list">
-                                            <tr>
-                                                <th>5관<div class="chair">총 279석</div></th> 
-                                                <th>2D</th>
-                                                <td>11:00</td>
-                                                <td>14:00</td>
-                                                <td>19:00</td>
-                                                <td>22:00</td>
-                                                <td>00:00</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                        </div>
-                    </div>
+                <div class="price_menu">
+                    <table>
+                        <p>3D</p>
+                        <th>요일</th>
+                        <th>상영시간</th>
+                        <th>일반</th>
+                        <th>청소년</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">월~목</td>
+                            <td>조조 (06:00~)</td>
+                            <td>9,000</td>
+                            <td>7,000</td>
+                        </tr>
+                        <tr>
+                            <td>일반 (10:01~)</td>
+                            <td>13,000</td>
+                            <td>11,000</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">금~일<br>공휴일</td>
+                            <td>조조 (06:00~)</td>
+                            <td>10,000</td>
+                            <td>8,000</td>
+                        </tr>
+                        <tr>
+                            <td>일반 (10:01~)</td>
+                            <td>14,000</td>
+                            <td>12,000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="theater_price_detail">
+                <h2 class="red">요금제</h2>
+                <ul>
+                    <li>
+                        <span class="blue">청소년 요금</span> 만7세~ 만18세 : 초등학생~고등학생(학생증, 교복, 청소년증, 의료보험증, 주민등록 등/초본, 그 외 청소년 확인 가능 서류)
+                    </li>
+                    <li>
+                        48개월 미만의 경우 증빙원(예 : 의료보험증, 주민등록 초/등본 등) 지참 시에만 무료 관람 가능
+                    </li>
+                </ul>
+            </div>
+            <div class="theater_price_detail">
+            <h2 class="red">우대 적용</h2>
+            <ul>
+                <li><span class="blue">국가유공자</span> 현장에서 국가유공자증을 소지한 본인 외 동반 1인까지 적용
+                </li>
+                <li><span class="blue">장애인</span> 현장에서 복지카드를 소지한 장애인(1급~3급까지 동반 1인까지 적용 / 4급~6급은 본인에 한함)
+                </li>
+                <li><span class="blue">경로</span> 만65세 이상 본인에 한함(신분증 확인)
+                </li>
+                <li><span class="blue">미취학아동</span> 부모 동반한 만4세~ 만6세까지 본인(의료보험증, 주민등록 초/등본 확인)
+                </li>
+                <li><span class="blue">소방종사자</span> 공무원증을 소지하거나 정복을 입은 소방관 본인
+                </li>
+            </ul>
+        </div>
+        </div>
+        </div>
 
     </section>
     <footer>
