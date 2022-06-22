@@ -94,6 +94,7 @@ th span {
 #content {
     width: 667px;
     height: 200px;
+    resize: none;
 }
 .length_container {
     text-align: right;
