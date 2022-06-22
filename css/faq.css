@@ -4,8 +4,8 @@
     margin: 0 auto;
     /* border: 1px solid black; */
 }
-.h2 {
-    width: 100%;
+.title {
+    width: 200px;
     padding-top: 30px;
     padding-left: 150px;
     color: #fb4357;

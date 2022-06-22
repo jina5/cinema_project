@@ -1,65 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="cinema/css/header.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="cinema/css/nav.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="cinema/css/footer.css">
-    
-    <script>
-        window.onload = function(){
-            var nav = document.querySelector('nav');
-            console.log(nav.offsetHeight);       
-            var sub_menu_container = document.querySelector('#sub_menu_container');         
-            var sub_menu_height = sub_menu_container.scrollHeight;
-            sub_menu_height += "px";
-            console.log(sub_menu_height);
-
-            nav.onmouseenter = () => {
-                sub_menu_container.style.height = sub_menu_height;
-            }
-            nav.onmouseleave = () => {
-                sub_menu_container.style.height = "0px";
-            }
-            var sub_menu_li = document.querySelectorAll('#sub_menu_container a');
-            for(i=0;i<sub_menu_li.length;i++){
-                sub_menu_li[i].onclick = () => {
-                    sub_menu_container.style.height = "0px";
-                }
-            }
-        }
-    </script>
+    <title>hhncinema</title>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/login_page.css">
+    <script src="script/nav.js" type="text/javascript"></script>
     <style>
-      section{
-        width: 1200px;
-        margin: 0 auto;
-        padding: 0;
-        height: 600px;
-        border: 1px solid black;  
-      }
-      
+        * {
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header_continer">
             <div id="header_logo_title_contianer">
-            <div id="header_logo_title">
-                <a href="#"><img src="cinema/header_nav_footer_img/header_logo.png" alt="메인 페이지"></a>
-                 <h3>CULTUREPLEX</h3>
+                <div id="header_logo_title">
+                    <a href="#"><img src="img/hhn_logo.png" alt="메인 페이지"></a>
+                    <h3>CULTUREPLEX</h3>
+                </div>
+                <div id="info">
+                    <ul id="member_info_wrap">
+                        <li><a href=""><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                        <li><a href=""><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                        <li><a href=""><img src="img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                        <li><a href="serviceCenter.html"><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                    </ul>
+                </div>
             </div>
-            <div id="info">
-                <ul id="member_info_wrap">
-                    <li><a href=""><img src="cinema/header_nav_footer_img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
-                    <li><a href=""><img src="cinema/header_nav_footer_img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
-                    <li><a href=""><img src="cinema/header_nav_footer_img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
-                    <li><a href=""><img src="cinema/header_nav_footer_img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
-                   </ul>
-            </div>
-        </div>
         </div>
     </header>
     <nav>
@@ -70,7 +44,7 @@
             <li><a href="#">영화</a></li>
             <li><a href="#">극장</a></li>
             <li><a href="#">예매</a></li>
-            <li><a href="#">고객센터</a></li>
+            <li><a href="serviceCenter.html">고객센터</a></li>
             <li class="serch_bar">|<input id="input" type="text" ></li>
             <li class="serch_bar_image"><button></button></li>
             <li></li>
@@ -97,19 +71,34 @@
                 <li><a href="#">예매</a></li>
             </ul>
             <ul class="sub_menu">
-                <li><a href="#">1:1문의</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="qna.html">1:1문의</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </div>
     </div>
     </nav>
-    <section>
+    <section class="section_container">
         <div>
+            <div class="login_box"><span>로그인</span></div>
+            <div class="login_container">
+                <input type="text" placeholder="아이디" id="id">
+            </div>
+            <div class="login_container">
+                <input type="password" placeholder="비밀번호" id="password">
+            </div>
+            <div class="login_container btn_box">
+                <button class="btn_login"><a href="#">회원가입</a></button>
+                <button class="btn_login"><a href="#">id/pw 찾기</a></button>
+                <button class="btn_login"><a href="#">로그인</a></button>
+            </div>
         </div>
+            <div class="login_img">
+                <img src="img/wireframe.jpg">
+            </div>
     </section>
     <footer>
         <div class="footer_container">
-            <div class="logo"><img src="cinema/header_nav_footer_img/header_logo.png" alt=""></div>
+            <div class="logo"><img src="img/hhn_logo.png" alt=""></div>
             <div class="company">
                 <ul>
                     <li>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
