@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/header.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/update.css">
+    <script src="script/nav.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        function passCheck(){
+            var reg = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&^])[A-Za-z\d@$!%*#?&^]{8,20}$/;
+            if(!reg.test($('#passwd').val())){
+                $('.passwd_result').html('암호 형식에 일치하지 않습니다.');
+                $('.passwd_result').removeClass('true').addClass('false');
+                return false;
+            }else if($('#passwd').val() != $('#pass_chk').val()){
+                $('.passwd_result').html('암호가 일치하지 않습니다.');
+                $('.passwd_result').removeClass('true').addClass('false');
+                return false;
+            }
+            $('.passwd_result').html('암호가 정상적으로 입력되었습니다.');
+            $('.passwd_result').removeClass('false').addClass('true');
+            return true;
+            
+        }
+        $(function() {
+            $('#passwd').keyup(passCheck);
+            $('#pass_chk').keyup(passCheck);
+            
+            $("#frm").submit((e) => {
+                if(!passCheck())
+                    e.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header_continer">
+            <div id="header_logo_title_contianer">
+                <div id="header_logo_title">
+                    <a href="#"><img src="img/hhn_logo.png" alt="메인 페이지"></a>
+                    <h3>CULTUREPLEX</h3>
+                </div>
+                <div id="info">
+                    <ul id="member_info_wrap">
+                        <li><a href=""><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                        <li><a href=""><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                        <li><a href=""><img src="img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                        <li><a href="serviceCenter.html"><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div id="nav_container">
+        <ul id="main_menu">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">영화</a></li>
+            <li><a href="#">극장</a></li>
+            <li><a href="#">예매</a></li>
+            <li><a href="serviceCenter.html">고객센터</a></li>
+            <li class="serch_bar">|<input id="input" type="text" ></li>
+            <li class="serch_bar_image"><button></button></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="sub_menu_container">
+            <ul >
+                <li></li>
+            </ul>
+            <ul >
+                <li></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">무비차트</a></li>
+                <li><a href="#">영화소개</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">극장정보</a></li>
+                <li><a href="#">상영시간표</a></li>
+                <li><a href="#">관람료</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">상영시간표</a></li>
+                <li><a href="#">예매</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="qna.html">1:1문의</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <section>
+        <div class="register_container">
+            <h2>회원정보수정</h2>
+            <div class="update_container">
+                <form action="" id="frm">
+                <table>
+                    <tr>
+                        <th><label for="id">아이디</label></th>
+                        <td><input type="text" name="id" id="id" placeholder="test" readonly class="readonly_border"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="passwd">비밀번호</label></th>
+                        <td><input type="password" name="passwd" id="passwd" placeholder="8~20자리로 입력하세요"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="pass_chk">비밀번호 확인</label></th>
+                        <td><input type="password" name="pass_chk" id="pass_chk" placeholder="비밀번호 재입력"></td>
+                    </tr>
+                    <tr><th></th><td class="passwd_result"></td></tr>
+                    <tr>
+                        <th><label for="nick">닉네임</label></th>
+                        <td><input type="text" name="nick" id="nick" value="test"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="birth">생년월일</label></th>
+                        <td><input type="date" name="birth" id="birth" value="1994-09-16" readonly class="readonly_border"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">이메일</label></th>
+                        <td>
+                            <input type="text" name="email" id="email"> <span>@</span> <select name="mail" id="mail">
+                            <option value="0">직접입력</option>
+                            <option value="0">gmail.com</option>
+                            <option value="0">naver.com</option>
+                            <option value="0">hanmail.net</option>
+                            </select>
+                            <input type="text" name="direct" id="direct">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="address">주소</label></th>
+                        <td><input type="text" name="address" id="address" value="서울시 마포구 000-000"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="phone">휴대전화</label></th>
+                        <td><input type="text" name="phone" id="phone" value="010-1111-2222"><button class="btn_phone">인증요청</button></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td><input type="text" placeholder="인증번호 입력"></td>
+                    </tr>
+                </table>
+                    <button class="btn_save">저장</button>
+                    <button class="btn_cancle">취소</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_container">
+            <div class="logo"><img src="img/hhn_logo.png" alt=""></div>
+            <div class="company">
+                <ul>
+                    <li>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
+                    <li>대표이사 : 허민회 | 사업자등록번호 : 104-81-45690 | 통신판매업신고번호 : 2017-서울용산-0662</li>
+                    <li>사업자정보확인 호스팅사업자 CJ올리브네트웍스 CJ올리브네트웍스</li>
+                    <li>개인정보보호 책임자 심준범 대표이메일 cjcgvmaster@cj.net © CJ CGV. All Rights Reserved</li>
+                </ul>
+            </div>
+            <div class="service_center">
+                <ul>
+                    <li>고객센터 : 1544-1122</li>
+                    <li>고객센터 운영시간 (평일 09:00~18:00)</li>
+                    <li>업무시간 외 자동응답 안내 가능합니다.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
