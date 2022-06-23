@@ -31,8 +31,7 @@
             }
             $('.passwd_result').html('암호가 정상적으로 입력되었습니다.');
             $('.passwd_result').removeClass('false').addClass('true');
-            return true;
-            
+            return true;      
         }
         $(function() {
             $('#passwd').keyup(passCheck);
@@ -41,6 +40,15 @@
             $("#frm").submit((e) => {
                 if(!passCheck())
                     e.preventDefault();
+            });
+            
+            $('#mail').change(function(){
+                // console.log($('#mail').val())
+                if($('#mail').val() == 0)
+                    $('#direct').css('display', 'initial')
+                    else 
+                    $('#direct').css('display', 'none')
+                    
             });
         });
     </script>
@@ -137,9 +145,9 @@
                         <td>
                             <input type="text" name="email" id="email"> <span>@</span> <select name="mail" id="mail">
                             <option value="0">직접입력</option>
-                            <option value="0">gmail.com</option>
-                            <option value="0">naver.com</option>
-                            <option value="0">hanmail.net</option>
+                            <option value="1">gmail.com</option>
+                            <option value="2">naver.com</option>
+                            <option value="3">hanmail.net</option>
                             </select>
                             <input type="text" name="direct" id="direct">
                         </td>

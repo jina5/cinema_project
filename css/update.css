@@ -30,7 +30,9 @@
     text-align: right;
 }
 .update_container table td {
+    width: 600px;
     padding-left: 10px;
+    /* border: 1px solid black; */
 }
 .update_container input {
     width: 400px;
@@ -50,7 +52,7 @@
     font-size: 16px;
 }
 #direct {
-    width: 170px    ;
+    width: 170px;
     display: none;
 }
 .update_container span {
