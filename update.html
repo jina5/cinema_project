@@ -8,8 +8,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/header.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/nav.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/update.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/up.css">
     <script src="script/update.js" type="text/javascript"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         * {
@@ -80,61 +81,63 @@
     </div>
     </nav>
     <section>
-        <div class="register_container">
-            <h2>회원정보수정</h2>
-            <div class="update_container">
-                <form action="" id="frm">
-                <table>
-                    <tr>
-                        <th><label for="id">아이디</label></th>
-                        <td><input type="text" name="id" id="id" placeholder="test" readonly class="readonly_border"></td>
-                    </tr>
-                    <tr>
-                        <th><label for="passwd">비밀번호</label></th>
-                        <td><input type="password" name="passwd" id="passwd" placeholder="8~20자리로 입력하세요"></td>
-                    </tr>
-                    <tr>
-                        <th><label for="pass_chk">비밀번호 확인</label></th>
-                        <td><input type="password" name="pass_chk" id="pass_chk" placeholder="비밀번호 재입력"></td>
-                    </tr>
-                    <tr><th></th><td class="passwd_result"></td></tr>
-                    <tr>
-                        <th><label for="nick">닉네임</label></th>
-                        <td><input type="text" name="nick" id="nick" value="test"></td>
-                    </tr>
-                    <tr>
-                        <th><label for="birth">생년월일</label></th>
-                        <td><input type="date" name="birth" id="birth" value="1994-09-16" readonly class="readonly_border"></td>
-                    </tr>
-                    <tr>
-                        <th><label for="email">이메일</label></th>
-                        <td>
-                            <input type="text" name="email" id="email"> <span>@</span> <select name="mail" id="mail">
-                            <option value="0">직접입력</option>
-                            <option value="1">gmail.com</option>
-                            <option value="2">naver.com</option>
-                            <option value="3">hanmail.net</option>
-                            </select>
-                            <input type="text" name="direct" id="direct">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><label for="address">주소</label></th>
-                        <td><input type="text" name="address" id="address" value="서울시 마포구 000-000"></td>
-                    </tr>
-                    <tr>
-                        <th><label for="phone">휴대전화</label></th>
-                        <td><input type="text" name="phone" id="phone" value="010-1111-2222"><button class="btn_phone">인증요청</button></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td><input type="text" placeholder="인증번호 입력"></td>
-                    </tr>
-                </table>
-                    <button class="btn_save">저장</button>
-                    <button class="btn_cancle">취소</button>
-                </form>
-            </div>
+        <!-- <h1>HHNcinema</h1> -->
+        <div class="container">
+            <h2 style="color: #fb4357;">회원정보수정</h2>
+            <form action="" id="frm">
+                <ul>
+                    <li><label for="id">이메일</label></li>
+                    <li class="border_bottom">
+                        <input type="text" name="id" id="id" value="test" readonly><span
+                            class="sub_txt">@kakao.com</span>
+                    </li>
+                    <li class="id_result"></li>
+                    <ul>
+                        <li>HHNcinema 이메일은 수정할 수 없습니다.</li>
+                        
+                    </ul>
+                    <li><label for="passwd">비밀번호</label></li>
+                    <li class="border_bottom">
+                        <input type="password" name="passwd" id="passwd" placeholder="영어+숫자+특수문자를 사용하여 8~20자리로 입력">
+                    </li>
+                    <li class="border_bottom">
+                        <input type="password" id="pass_chk" placeholder="비밀번호 재입력">
+                    </li>
+                    <li class="pass_check"></li>
+                    <li><label for="nick">닉네임</label></li>
+                    <li class="border_bottom">
+                        <input type="text" name="nick" id="nick" value="test"><span class="sub_txt" id="nick_length">0/20</span>
+                    </li>
+                    <li class="member address">
+                    <h4>우편번호</h4>
+                    <span class="input_area"><input type="text" name="address" class="postcodify_postcode5 border_bottom" id="sample6_postcode"></span>
+                    <input type="button" id="address_btn" onclick="sample6_execDaumPostcode()" value="우편번호 검색"><br>
+                    <h4>도로명주소</h4>
+                    <span class="input_area"><input type="text" name="address" id="sample6_address" class="postcodify_address border_bottom"></span>
+                    <h4>상세주소</h4>
+                    <span class="input_area"><input type="text" name="address" id="sample6_detailAddress" class="postcodify_details border_bottom"></span>
+                    
+                    </li>
+                    <li><label for="tel">전화번호</label></li>
+                    <li class="border_bottom">
+                        <select name="gcode" id="gcode">
+                            <option value="82">+82</option>
+                            <option value="1">+1</option>
+                            <option value="84">+84</option>
+                            <option value="55">+55</option>
+                        </select><input type="text" name="tel" id="tel" placeholder="전화번호 입력하세요 -는 빼고" class="left_border">
+                    </li>
+                    <li>
+                        <button type="button" class="btn_send_no">인증번호 전송</button>
+                    </li>
+                   
+                    <li>
+                        <button class="btn_save">회원정보저장</button>
+                    </li>
+    
+                </ul>
+            </form>
+    
         </div>
     </section>
     <footer>
