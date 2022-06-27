@@ -72,11 +72,12 @@ window.onload = function(){
         // }
         // nick_length.innerHTML = `${nick.value.length}/20`;
         // return true;
-        if($('#nick').val().length() > 20) {
+        
+        if($('#nick').val().length > 20) {
             $('#nick').val() = $('#nick').val(substr(0,20));
             return false;
         }
-        $('#nick_length').html($('#nick').val().length() + '/20');
+        $('#nick_length').html($('#nick').val().length + '/20');
         return true;
     }
 
@@ -99,7 +100,7 @@ window.onload = function(){
         $('#passwd').keyup(passCheck);
         $('#pass_chk').keyup(passCheck);
         $('#nick').keyup(checkNick);
-
+       
             $("#frm").submit((e) => {
                 if(!passCheck())
                     e.preventDefault();
