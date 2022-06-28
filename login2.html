@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +18,9 @@
             padding: 0;
         }
     </style>
+
 </head>
+
 <body>
     <header>
         <div class="header_continer">
@@ -31,7 +34,8 @@
                         <li><a href=""><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
                         <li><a href=""><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
                         <li><a href=""><img src="img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
-                        <li><a href="serviceCenter.html"><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                        <li><a href="serviceCenter.html"><img src="img/header_loginCustomer.png"
+                                    alt=""><br><span>고객센터</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -39,99 +43,177 @@
     </header>
     <nav>
         <div id="nav_container">
-        <ul id="main_menu">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#">영화</a></li>
-            <li><a href="#">극장</a></li>
-            <li><a href="#">예매</a></li>
-            <li><a href="serviceCenter.html">고객센터</a></li>
-            <li class="serch_bar">|<input id="input" type="text" ></li>
-            <li class="serch_bar_image"><button></button></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <div id="sub_menu_container">
-            <ul >
-                <li></li>
-            </ul>
-            <ul >
-                <li></li>
-            </ul>
-            <ul class="sub_menu">
-                <li><a href="#">무비차트</a></li>
-                <li><a href="#">영화소개</a></li>
-            </ul>
-            <ul class="sub_menu">
-                <li><a href="#">극장정보</a></li>
-                <li><a href="#">상영시간표</a></li>
-                <li><a href="#">관람료</a></li>
-            </ul>
-            <ul class="sub_menu">
-                <li><a href="#">상영시간표</a></li>
+            <ul id="main_menu">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#">영화</a></li>
+                <li><a href="#">극장</a></li>
                 <li><a href="#">예매</a></li>
+                <li><a href="serviceCenter.html">고객센터</a></li>
+                <li class="serch_bar">|<input id="input" type="text"></li>
+                <li class="serch_bar_image"><button></button></li>
+                <li></li>
+                <li></li>
             </ul>
-            <ul class="sub_menu">
-                <li><a href="qna.html">1:1문의</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
+            <div id="sub_menu_container">
+                <ul>
+                    <li></li>
+                </ul>
+                <ul>
+                    <li></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">무비차트</a></li>
+                    <li><a href="#">영화소개</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">극장정보</a></li>
+                    <li><a href="#">상영시간표</a></li>
+                    <li><a href="#">관람료</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">상영시간표</a></li>
+                    <li><a href="#">예매</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="qna.html">1:1문의</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
     </nav>
 
     </ul>
     <section class="section_container">
         <div>
             <h1>로그인</h1>
-            <ul class="tab-menu">
+            <ul class="tab-menu" style="width:1200px">
+                <li>
+                    <a href="login1.html">로그인</a>
+                </li>
                 <li class="on">
-                    <a href="#">로그인</a>
+                    <a href="login2.html">비회원 예매</a>
                 </li>
                 <li>
-                    <a href="#">비회원 예매</a>
+                    <a href="login3.html">비회원 예매확인</a>
                 </li>
-                <li>
-                    <a href="#">비회원 예매확인</a>
-                </li>
-                </ul>
-                <div class="agree_box">
-                    <h3><strong class="red">STEP 1 </strong>개인정보 수집 및 이용동의</h3>
-                       <p>비회원 예매 고객께서는 먼저 개인정보 수집 및 이용 동의 정책에 동의해 주셔야 합니다.</p><br>
-                       <div>
-                           <table>
-                               <caption>개인정보 수집 및 활용 동의</caption>
-                               <thead>
-                                   <tr>
-                                       <th scope="col">항목</th>
-                                       <th scope="col">이용목적</th>
-                                       <th scope="col">보유기간</th>
-                                       <th scope="col">동의여부</th>
-                                   </tr>
-                               </thead>
-                               <tbody>
-                                   <tr>
-                                       <th>법정생년월일, 휴대폰번호, 비밀번호</th>
-                                       <td>
-                                           <ul>
-                                               <li>비회원 예매서비스 제공</li>
-                                               <li>이용자식별, 요금정산, 추심, 신규서비스 개발, <br>접속빈도 파악 등</li>
-                                           </ul>
-                                       </td>
-                                       <td>관람 또는 취소 후 1주일 까지</td>
-                                       <td>
-                                               <input name="agreecheck" id="agree" type="radio" value="Y"><label for="agree">동의함</label>
-                                               <input name="agreecheck" id="disagree" type="radio" value="N" checked="checked"><label for="disagree">동의안함</label>
-                                       </td>
-                                   </tr>
-                               </tbody>
-                           </table>
-                           <div>
-                               <p>※ CGV 비회원 예매서비스 제공을 위해 필요한 최소한의 개인정보이므로 입력(수집)에 동의하시지 않을 경우 서비스를 이용하실 수 없습니다.</p>
-                               <a href="#"><span>개인정보처리(취급)방침전문보기</span></a>
-                           </div>
-                       </div>
-           
-                   </div>
+            </ul>
+            <div class="step1">
+                <h3><strong class="red">STEP 1 </strong>개인정보 수집 및 이용동의</h3>
+                <p>비회원 예매 고객께서는 먼저 개인정보 수집 및 이용 동의 정책에 동의해 주셔야 합니다.</p><br>
+                <table>
+                    <caption style="text-align: left;">개인정보 수집 및 활용 동의</caption>
+                    <thead>
+                        <tr>
+                            <th>항목</th>
+                            <th>이용목적</th>
+                            <th>보유기간</th>
+                            <th class="red">동의여부</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>법정생년월일, 휴대폰번호, 비밀번호</th>
+                            <td>
+                                <ul>
+                                    <li>비회원 예매서비스 제공</li>
+                                    <li>이용자식별, 요금정산, 추심, 신규서비스 개발, <br>접속빈도 파악 등</li>
+                                </ul>
+                            </td>
+                            <td>관람 또는 취소 후 1주일 까지</td>
+                            <td>
+                                <input name="agreecheck" id="agree" type="radio" value="Y"><label for="agree">
+                                    동의함</label><br>
+                                <input name="agreecheck" id="disagree" type="radio" value="N" checked="checked"><label
+                                    for="disagree"> 동의안함</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <p style="font-size: 13px;">※ CGV 비회원 예매서비스 제공을 위해 필요한 최소한의 개인정보이므로 입력(수집)에 동의하시지 않을 경우 서비스를 이용하실 수
+                        없습니다.</p>
+                    <a href="#" style="font-size: 13px;">개인정보처리(취급)방침 전문보기</a>
+                </div>
+            </div>
+            <hr>
+            <div class="step2">
+                <h3><strong class="red">STEP 2 </strong>개인정보(휴대폰번호,법정생년월일,비밀번호) 입력</h3>
+                <p>개인정보를 잘못 입력하시면 예매내역 확인/취소 및 티켓 발권이 어려울 수 있으니, 입력하신 정보를 다시 한번 확인해주시기 바랍니다.</p><br>
+                <div class="box">
+                    <p style="font-size: 13px;">모든 항목은 필수 입력사항입니다.</p>
+                    <form>
+                        <table>
+                            <tr>
+                                <th><label for="Birthday">법정생년월일 (8자리)</label></th>
+                                <td><input type="text" data-title="생년월일" data-message="을 올바르게 입력해주세요." name="Birthday"
+                                        id="Birthday" length="8" maxlength="8" required="required">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>휴대폰번호</th>
+                                <td>
+                                    <select title="휴대폰번호 앞자리" name="Mobile1" id="Mobile1">
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                    -
+                                    <input type="text" title="휴대폰번호 중간자리" data-title="휴대폰번호 중간자리"
+                                        data-message="를 입력해주세요." name="Mobile2" id="Mobile2" length="4" maxlength="4"
+                                        required="required">
+                                    -
+                                    <input type="text" title="휴대폰번호 끝자리" data-title="휴대폰번호 끝자리" data-message="를 입력해주세요."
+                                        name="Mobile3" id="Mobile3" length="4" maxlength="4" required="required">
+                                    <a href="#">인증번호받기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="AuthNumber">인증번호 (4자리)</label></th>
+                                <td id="certificationtd">
+                                    <input type="password" class="only-number" data-title="인증번호"
+                                        data-message="를 입력해주세요." id="AuthNumber" name="AuthNumber" length="4"
+                                        maxlength="4" required="required">
+                                    <a href="#">인증확인</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="Password">비밀번호 (4자리)</label></th>
+                                <td><input type="password" title="비밀번호(4자리)" data-message="를 입력해주세요." name="Password"
+                                        id="Password" length="4" maxlength="4" required="required"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="txtConfirmPassword">비밀번호확인</label></th>
+                                <td><input type="password" title="비밀번호 확인" data-message="을 입력해주세요."
+                                        name="ConfirmPassword" id="ConfirmPassword" length="4" maxlength="4"
+                                        required="required"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <button type="submit">비회원 예매하기</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="step3">
+                <div class="left red">
+                    비회원<br>예매 시<br>참고하세요!
+                </div>
+                <ol>
+                    <li>위 정보 수집 및 이용에 동의하지 않을 경우, 비회원 예매 서비스를 이용하실 수 없습니다.</li>
+                    <li>비회원 예매 시 청소년 관람불가 영화는 예매가 제한됩니다.</li>
+                    <li>만 14세 미만 고객은 비회원으로 예매하실 수 없습니다.</li>
+                    <li>비회원 예매 결제수단은 신용카드만 가능하며 모든 제휴상품권, 쿠폰, 영화예매권 등은 회원 예매 서비스 이용 시 사용 가능합니다.</li>
+                    <li>ARS에서는 취소가 불가능하며, 홈페이지/모바일을 이용하여 취소 처리하실 수 있습니다.</li>
+                    <li>비회원 예매 및 예매 확인/취소 메뉴만 이용 가능합니다. 그 외 서비스는 회원 가입 후 이용해 주십시오. </li>
+                    <li>문의 사항은 CGV고객센터(1544-1122)로 문의해 주시기 바랍니다. (평일 9:00~18:00)</li>
+                </ol>
+            </div>
+        </div>
     </section>
     <footer>
         <div class="footer_container">
@@ -154,4 +236,5 @@
         </div>
     </footer>
 </body>
+
 </html>

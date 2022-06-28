@@ -1,59 +1,70 @@
-.check{
+.check {
     display: flex;
-    padding:30px 0px;
+    padding: 30px 0px;
 }
-.check_info{
-    width:600px;
-    margin-right:50px;
-    
+
+.check_info {
+    width: 600px;
+    margin-right: 50px;
+
 }
-.check_info h3{
-    padding:0px;
+
+.check_info h3 {
+    padding: 0px;
 }
-.orange{
-    color:rgb(255, 81, 0);
+
+.orange {
+    color: rgb(255, 81, 0);
 }
+
 .check_form input {
-    width:370px;
-height:35px;
-display: block;
-margin:10px 10px;
+    width: 370px;
+    height: 35px;
+    display: block;
+    margin: 10px 10px;
 }
-.check_form button{
-    width:380px;
-    height:40px;
-    margin:5px 5px;
+
+.check_form button {
+    width: 380px;
+    height: 40px;
+    margin: 5px 5px;
     background-color: black;
     border-radius: 5px;
 }
-.check_form button:last-child{
-background-color: rgb(168, 168, 168);
-border:none
+
+.check_form button:last-child {
+    background-color: rgb(168, 168, 168);
+    border: none
 }
+
 .check_form button a {
-color:white;
-font-weight: bold;
-text-decoration: none;
-font-size:16px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 li {
-        padding: 2px 0px;
+    padding: 2px 0px;
 }
-.dotted{
+
+.dotted {
     list-style-type: disc;
 }
-.use_info{
-    margin-bottom:50px;
-    padding-right:30px;
+
+.use_info {
+    margin-bottom: 50px;
+    padding-right: 30px;
 }
-.check_form button:hover{
+
+.check_form button:hover {
     background-color: #fb4357;
-    border:none;
+    border: none;
 }
+
 .popup_box {
     width: 500px;
-    height: 200px;
+    height: 270px;
     border: 1px solid black;
     position: absolute;
     top: calc(50% - 120px);
@@ -62,34 +73,65 @@ li {
     z-index: 2;
     display: none;
 }
+
 .close_box {
     width: 100%;
     height: 40px;
-    border: 1px solid black;
-    background-color:#fb4357;
+    background-color: #fb4357;
+    border-bottom:1px solid black;
     box-sizing: border-box;
 }
+
 .close {
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
     position: absolute;
-    top: 0;
+    top: -3px;
     right: 0px;
     padding: 8px 10px;
     color: black;
 }
+
 .popup_box p {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 40px;
 }
+
 .popup_btn {
     text-align: center;
-    margin-top: 30px;   
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.popup_update, .popup_cancle {
+
+.popup_btn button {
+    margin: 2px;
+    width: 200px;
+    height: 30px;
+}
+
+.popup_btn button:hover {
+    background-color: #fb4357;
+    border: none;
+    border-radius: 3px;
+}
+
+.popup_btn button a {
+    color: black;
+    text-decoration: none;
+}
+
+.popup_btn button:hover a {
+    color: white;
+    font-weight: bold;
+}
+
+.popup_update,
+.popup_cancle {
     width: 100px;
     height: 40px;
     background-color: rgb(224, 224, 224);
@@ -98,13 +140,17 @@ li {
     font-weight: bold;
     border-radius: 10px;
 }
-.popup_update:hover, .popup_cancle:hover {
+
+.popup_update:hover,
+.popup_cancle:hover {
     background-color: #fb4357;
     color: white;
 }
+
 .popup_update {
     margin-right: 50px;
 }
+
 .blur {
     width: 100%;
     height: 100%;
