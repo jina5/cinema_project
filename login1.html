@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hhncinema</title>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="script/login.js" type="text/javascript"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_continer">
+            <div id="header_logo_title_contianer">
+                <div id="header_logo_title">
+                    <a href="#"><img src="img/hhn_logo.png" alt="메인 페이지"></a>
+                    <h3>CULTUREPLEX</h3>
+                </div>
+                <div id="info">
+                    <ul id="member_info_wrap">
+                        <li><a href=""><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                        <li><a href=""><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                        <li><a href=""><img src="img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                        <li><a href="serviceCenter.html"><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div id="nav_container">
+        <ul id="main_menu">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">영화</a></li>
+            <li><a href="#">극장</a></li>
+            <li><a href="#">예매</a></li>
+            <li><a href="serviceCenter.html">고객센터</a></li>
+            <li class="serch_bar">|<input id="input" type="text" ></li>
+            <li class="serch_bar_image"><button></button></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="sub_menu_container">
+            <ul >
+                <li></li>
+            </ul>
+            <ul >
+                <li></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">무비차트</a></li>
+                <li><a href="#">영화소개</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">극장정보</a></li>
+                <li><a href="#">상영시간표</a></li>
+                <li><a href="#">관람료</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">상영시간표</a></li>
+                <li><a href="#">예매</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="qna.html">1:1문의</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    </ul>
+    <section class="section_container">
+        <div>
+            <h1>로그인</h1>
+            <ul class="tab-menu">
+                <li class="on">
+                    <a href="login1.html">로그인</a>
+                </li>
+                <li>
+                    <a href="login2.html">비회원 예매</a>
+                </li>
+                <li>
+                    <a href="login3.html">비회원 예매확인</a>
+                </li>
+                </ul>
+            <div class="login_container">
+                <input type="text" placeholder="아이디" id="id">
+            </div>
+            <div class="login_container">
+                <input type="password" placeholder="비밀번호" id="password">
+            </div>
+            <div class="btn_box">
+                <button><a href="#">회원가입</a></button>
+                <button><a href="#">id/pw 찾기</a></button>
+                <button><a href="#">로그인</a></button>
+                <a href="#0" id="kakaoLogin"><img src="img/kakao_login.png" alt="카카오계정 로그인" style="height: 100px;"/></a>
+            </div>
+        </div>
+            <div class="login_img">
+                <img src="img/wireframe.jpg">
+            </div>
+    </section>
+    <footer>
+        <div class="footer_container">
+            <div class="logo"><img src="img/hhn_logo.png" alt=""></div>
+            <div class="company">
+                <ul>
+                    <li>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
+                    <li>대표이사 : 허민회 | 사업자등록번호 : 104-81-45690 | 통신판매업신고번호 : 2017-서울용산-0662</li>
+                    <li>사업자정보확인 호스팅사업자 CJ올리브네트웍스 CJ올리브네트웍스</li>
+                    <li>개인정보보호 책임자 심준범 대표이메일 cjcgvmaster@cj.net © CJ CGV. All Rights Reserved</li>
+                </ul>
+            </div>
+            <div class="service_center">
+                <ul>
+                    <li>고객센터 : 1544-1122</li>
+                    <li>고객센터 운영시간 (평일 09:00~18:00)</li>
+                    <li>업무시간 외 자동응답 안내 가능합니다.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
