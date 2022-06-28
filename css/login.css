@@ -214,3 +214,44 @@ input:focus{
     margin: 0;
     padding: 0;
 }
+#kakaoLogin img, .kakaoLogout img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.dis_none {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(249, 224, 0);  
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.loginBox {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(249, 224, 0);  
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.loginBox a, .dis_none a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.login_text {
+    margin-left: 20px;
+}
+.logout_text {
+    margin-left: 60px;
+}

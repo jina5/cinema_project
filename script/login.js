@@ -19,6 +19,7 @@ window.onload = function(){
         }
     }
 
+    
 
     var tab = document.querySelectorAll('.tab-menu li');
     tab[0].onclick = () => {
@@ -37,11 +38,37 @@ window.onload = function(){
         tab[0].classList.remove('on');
     }
 
+    
     function saveToDos(token) { //item을 localStorage에 저장합니다. 
         typeof(Storage) !== 'undefined' && sessionStorage.setItem('AccessKEY', JSON.stringify(token)); 
     };
-
+    
     window.Kakao.init('c107017d3c78a41473933d3434b2865b');
+    function kakaoLogout() {
+        if (!Kakao.Auth.getAccessToken()) {
+            console.log('Not logged in.');
+		    return;
+	    }
+	    Kakao.Auth.logout(function(response) {
+            // secession();
+            alert(response +' logout');
+		    window.location.href='login1.html'
+	    });
+    }
+    function secession() {
+        Kakao.API.request({
+            url: '/v1/user/unlink',
+            success: function(response) {
+                console.log(response);
+                //callback(); //연결끊기(탈퇴)성공시 서버에서 처리할 함수
+                window.location.href='login1.html'
+            },
+            fail: function(error) {
+                console.log('탈퇴 미완료')
+                console.log(error);
+            },
+        });
+    };
     
     function kakaoLogin() {
         window.Kakao.Auth.login({
@@ -53,7 +80,7 @@ window.onload = function(){
                     success: (res) => {
                         const kakao_account = res.kakao_account;
                         alert('로그인 성공');
-                        window.location.href='/ex/kakao_login.html'
+                        window.location.href='login1.html'
                     }
                 });
             },
@@ -62,7 +89,12 @@ window.onload = function(){
             }
         });
     };
-
+    
+    
     const login = document.querySelector('#kakaoLogin');
     login.addEventListener('click', kakaoLogin);
+    const logout = document.querySelector('.kakaoLogout');
+    logout.addEventListener('click', kakaoLogout);
+    const sion = document.querySelector('.secession');
+    sion.addEventListener('click', secession);
 }
