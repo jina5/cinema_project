@@ -140,8 +140,9 @@ width:200px;}
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
 }
-.box form table td{
+.box form table td, .search_box form table td{
     height:40px;
+    width:400px;
 }
 .box form table th, .search_box table th{
     width:180px;
@@ -157,6 +158,7 @@ width:200px;}
     height:24px;
 }
 .box form table a{
+    width:100px;
     text-decoration: none;
     color:black;
     font-size: 13px;
@@ -169,7 +171,7 @@ width:200px;}
     width:170px;
     height:40px;
     font-size:16px;
-    margin-left: 180px;
+    margin-left: 200px;
 }
 .box button:hover, .search_box button:hover{
     background-color: #fb4357;
@@ -207,4 +209,8 @@ a{
 }
 .btn_box button{
     border-radius: 3px;
+}
+input:focus{
+    margin: 0;
+    padding: 0;
 }
