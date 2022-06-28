@@ -94,21 +94,44 @@
                     <a href="#">비회원 예매확인</a>
                 </li>
                 </ul>
-            <div class="login_container">
-                <input type="text" placeholder="아이디" id="id">
-            </div>
-            <div class="login_container">
-                <input type="password" placeholder="비밀번호" id="password">
-            </div>
-            <div class="btn_box">
-                <button><a href="#">회원가입</a></button>
-                <button><a href="#">id/pw 찾기</a></button>
-                <button><a href="#">로그인</a></button>
-            </div>
-        </div>
-            <div class="login_img">
-                <img src="img/wireframe.jpg">
-            </div>
+                <div class="agree_box">
+                    <h3><strong class="red">STEP 1 </strong>개인정보 수집 및 이용동의</h3>
+                       <p>비회원 예매 고객께서는 먼저 개인정보 수집 및 이용 동의 정책에 동의해 주셔야 합니다.</p><br>
+                       <div>
+                           <table>
+                               <caption>개인정보 수집 및 활용 동의</caption>
+                               <thead>
+                                   <tr>
+                                       <th scope="col">항목</th>
+                                       <th scope="col">이용목적</th>
+                                       <th scope="col">보유기간</th>
+                                       <th scope="col">동의여부</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
+                                   <tr>
+                                       <th>법정생년월일, 휴대폰번호, 비밀번호</th>
+                                       <td>
+                                           <ul>
+                                               <li>비회원 예매서비스 제공</li>
+                                               <li>이용자식별, 요금정산, 추심, 신규서비스 개발, <br>접속빈도 파악 등</li>
+                                           </ul>
+                                       </td>
+                                       <td>관람 또는 취소 후 1주일 까지</td>
+                                       <td>
+                                               <input name="agreecheck" id="agree" type="radio" value="Y"><label for="agree">동의함</label>
+                                               <input name="agreecheck" id="disagree" type="radio" value="N" checked="checked"><label for="disagree">동의안함</label>
+                                       </td>
+                                   </tr>
+                               </tbody>
+                           </table>
+                           <div>
+                               <p>※ CGV 비회원 예매서비스 제공을 위해 필요한 최소한의 개인정보이므로 입력(수집)에 동의하시지 않을 경우 서비스를 이용하실 수 없습니다.</p>
+                               <a href="#"><span>개인정보처리(취급)방침전문보기</span></a>
+                           </div>
+                       </div>
+           
+                   </div>
     </section>
     <footer>
         <div class="footer_container">

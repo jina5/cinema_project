@@ -1,10 +1,9 @@
 @charset 'utf-8';
-
-@charset 'utf-8';
 footer{
     display: flex;
     width: 100%;
     background-color: rgb(200, 200, 200);
+    
 }
 .footer_container {
     width: 1200px;
@@ -48,5 +47,3 @@ footer{
 .service_center ul li {
     margin-top: 10px;
 }
-
-
