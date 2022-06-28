@@ -1,5 +1,5 @@
 $(function(){
-    $('.btn').click(function(){
+    $('.chk').click(function(){
         $('.popup_box').css('display', 'block');
     })
     $('.close').click(function(){
