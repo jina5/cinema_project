@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/header.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/theater.css">
+    <script src="script/theater.js" type="text/javascript"></script>
+    <script src="script/nav.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header_continer">
+            <div id="header_logo_title_contianer">
+                <div id="header_logo_title">
+                    <a href="index.html"><img src="img/header_logo.png" alt="메인 페이지"></a>
+                    <h3>CULTUREPLEX</h3>
+                </div>
+                <div id="info">
+                    <ul id="member_info_wrap">
+                        <li><a href="login1.html"><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                        <li><a href="check.html"><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                        <li><a href=""><img src="img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                        <li><a href="faq.html"><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div id="nav_container">
+            <ul id="main_menu">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="movie_chart.html">영화</a></li>
+                <li><a href="theater_info.html">극장</a></li>
+                <li><a href="#">예매</a></li>
+                <li><a href="faq.html">고객센터</a></li>
+                <li class="serch_bar">|<input id="input" type="text"></li>
+                <li class="serch_bar_image"><button></button></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div id="sub_menu_container">
+                <ul>
+                    <li></li>
+                </ul>
+                <ul>
+                    <li></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="movie_chart.html">무비차트</a></li>
+                    <li><a href="movie_info.html">영화소개</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="theater_info.html">극장정보</a></li>
+                    <li><a href="theater_timetable.html">상영시간표</a></li>
+                    <li><a href="theater_price.html">관람료</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">상영시간표</a></li>
+                    <li><a href="#">예매</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="qna.html">1:1문의</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="all_theater_container">
+            <ul class="theater_menu">
+                <li class="seoul">서울</li>
+                <li class="gg">경기</li>
+            </ul>
+            <ul class="theater_sub_menu">
+                <ul id="seoul">
+                    <li class="seoul_li"><a href="#">강남</a></li>
+                    <li class="seoul_li"><a href="#">신촌</a></li>
+                    <li class="seoul_li"><a href="#">홍대</a></li>
+                </ul>
+                <ul id="gg">
+                    <li class="gg_li"><a href="#">수원</a></li>
+                    <li class="gg_li"><a href="#">동탄</a></li>
+                </ul>
+            </ul>
+            </ul>
+        </div>
+        <div class="theater_detail_container">
+            <ul class="theater_detail_menu">
+                <li><a href="/theater_info.html" title="극장정보 탭으로 이동">극장정보</a></li>
+                <li><a href="/theater_timetable.html" title="상영시간표 탭으로 이동">상영시간표</a></li>
+                <li><a href="/theater_price.html" title="관람료 탭으로 이동">관람료</a></li>
+            </ul>
+        </div>
+        <div id="tab3">
+            <div class="theater_price">
+                <h2 class="red">영화관람료</h2>
+                <div class="price_menu">
+                    <table>
+                        <p>2D</p>
+                        <th>요일</th>
+                        <th>상영시간</th>
+                        <th>일반</th>
+                        <th>청소년</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">월~목</th>
+                            <td>조조 (06:00~)</td>
+                            <td>9,000</td>
+                            <td>7,000</td>
+                        </tr>
+                        <tr>
+                            <td>일반 (10:01~)</td>
+                            <td>13,000</td>
+                            <td>11,000</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">금~일<br>공휴일</th>
+                            <td>조조 (06:00~)</td>
+                            <td>10,000</td>
+                            <td>8,000</td>
+                        </tr>
+                        <tr>
+                            <td>일반 (10:01~)</td>
+                            <td>14,000</td>
+                            <td>12,000</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="price_menu">
+                    <table>
+                        <p>3D</p>
+                        <th>요일</th>
+                        <th>상영시간</th>
+                        <th>일반</th>
+                        <th>청소년</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">월~목</td>
+                            <td>조조 (06:00~)</td>
+                            <td>9,000</td>
+                            <td>7,000</td>
+                        </tr>
+                        <tr>
+                            <td>일반 (10:01~)</td>
+                            <td>13,000</td>
+                            <td>11,000</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">금~일<br>공휴일</td>
+                            <td>조조 (06:00~)</td>
+                            <td>10,000</td>
+                            <td>8,000</td>
+                        </tr>
+                        <tr>
+                            <td>일반 (10:01~)</td>
+                            <td>14,000</td>
+                            <td>12,000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="theater_price_detail">
+                <h2 class="red">요금제</h2>
+                <ul>
+                    <li>
+                        <span class="blue">청소년 요금</span> 만7세~ 만18세 : 초등학생~고등학생(학생증, 교복, 청소년증, 의료보험증, 주민등록 등/초본, 그 외 청소년 확인 가능 서류)
+                    </li>
+                    <li>
+                        48개월 미만의 경우 증빙원(예 : 의료보험증, 주민등록 초/등본 등) 지참 시에만 무료 관람 가능
+                    </li>
+                </ul>
+            </div>
+            <div class="theater_price_detail">
+            <h2 class="red">우대 적용</h2>
+            <ul>
+                <li><span class="blue">국가유공자</span> 현장에서 국가유공자증을 소지한 본인 외 동반 1인까지 적용
+                </li>
+                <li><span class="blue">장애인</span> 현장에서 복지카드를 소지한 장애인(1급~3급까지 동반 1인까지 적용 / 4급~6급은 본인에 한함)
+                </li>
+                <li><span class="blue">경로</span> 만65세 이상 본인에 한함(신분증 확인)
+                </li>
+                <li><span class="blue">미취학아동</span> 부모 동반한 만4세~ 만6세까지 본인(의료보험증, 주민등록 초/등본 확인)
+                </li>
+                <li><span class="blue">소방종사자</span> 공무원증을 소지하거나 정복을 입은 소방관 본인
+                </li>
+            </ul>
+        </div>
+        </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer_container">
+            <div class="logo"><img src="img/header_logo.png" alt=""></div>
+            <div class="company">
+                <ul>
+                    <li>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
+                    <li>대표이사 : 허민회 | 사업자등록번호 : 104-81-45690 | 통신판매업신고번호 : 2017-서울용산-0662</li>
+                    <li>사업자정보확인 호스팅사업자 CJ올리브네트웍스 CJ올리브네트웍스</li>
+                    <li>개인정보보호 책임자 심준범 대표이메일 cjcgvmaster@cj.net © CJ CGV. All Rights Reserved</li>
+                </ul>
+            </div>
+            <div class="service_center">
+                <ul>
+                    <li>고객센터 : 1544-1122</li>
+                    <li>고객센터 운영시간 (평일 09:00~18:00)</li>
+                    <li>업무시간 외 자동응답 안내 가능합니다.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

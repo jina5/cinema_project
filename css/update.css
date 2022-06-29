@@ -1,0 +1,180 @@
+@charset 'utf-8';
+
+.register_container {
+    width: 1200px;
+    height: 850px;
+    margin: 0 auto;
+    position: relative;
+    /* border: 1px solid black; */
+}
+.register_container h2 {
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 550px;
+    color: #fb4357;
+}
+.update_container {
+    /* border: 1px solid black; */
+}
+.update_container table {
+    border-collapse: collapse;
+    margin-left: 253px;
+}
+.update_container table th, .update_container table td {
+    /* border: 1px solid black; */
+    padding: 15px 0px;
+}
+.update_container table th {
+    width: 150px;
+    padding-right: 10px;
+    text-align: right;
+}
+.update_container table td {
+    width: 600px;
+    padding-left: 10px;
+    /* border: 1px solid black; */
+}
+.update_container input {
+    width: 400px;
+    height: 40px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#passwd, #pass_chk {
+    font-size: 16px;
+}
+#email {
+    width: 200px;
+}
+#mail {
+    width: 170px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+#direct {
+    width: 170px;
+    display: none;
+}
+.update_container span {
+    font-size: 20px;
+}
+.btn_phone {
+    width: 100px;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(224, 224, 224);
+}
+.btn_phone:hover {
+    border: 2px solid black;
+}
+.btn_td {
+    display: flex;
+    justify-content: space-between;
+}
+.btn_save, .btn_cancle {
+    width: 120px;
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgb(224, 224, 224);
+    margin: 10px 0px;
+}
+.btn_save:hover, .btn_cancle:hover {
+    background-color: #fb4357;
+    color: white;
+}
+.btn_save {
+    position: absolute;
+    left: 375px;
+}
+.btn_cancle {
+    position: absolute;
+    right: 375px;
+}
+.readonly_border {
+    border: 1px solid gray;
+}
+.pass_result, .pass_chk_result {
+    font-size: 14px;
+}
+.true {
+    color: blue;
+    font-weight: bold;
+}
+
+.false {
+    color: red;
+    font-weight: bold;
+}
+.popup_box {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+    top: calc(50% - 120px);
+    left: calc((50% - 250px));
+    background-color: white;
+    z-index: 2;
+    display: none;
+}
+.close_box {
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    background-color:#fb4357;
+    box-sizing: border-box;
+}
+.close {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding: 8px 10px;
+    color: black;
+}
+.popup_box p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.popup_btn {
+    text-align: center;
+    margin-top: 30px;   
+}
+.popup_update, .popup_cancle {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(224, 224, 224);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.popup_update:hover, .popup_cancle:hover {
+    background-color: #fb4357;
+    color: white;
+}
+.popup_update {
+    margin-right: 50px;
+}
+.blur {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}

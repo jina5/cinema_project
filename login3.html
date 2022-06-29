@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hhncinema</title>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="script/nav.js" type="text/javascript"></script>
+    <script src="script/login.js" type="text/javascript"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="header_continer">
+            <div id="header_logo_title_contianer">
+                <div id="header_logo_title">
+                    <a href="index.html"><img src="img/header_logo.png" alt="메인 페이지"></a>
+                    <h3>CULTUREPLEX</h3>
+                </div>
+                <div id="info">
+                    <ul id="member_info_wrap">
+                        <li><a href="login1.html"><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                        <li><a href="check.html"><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                        <li><a href=""><img src="img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                        <li><a href="faq.html"><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div id="nav_container">
+            <ul id="main_menu">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="movie_chart.html">영화</a></li>
+                <li><a href="theater_info.html">극장</a></li>
+                <li><a href="#">예매</a></li>
+                <li><a href="faq.html">고객센터</a></li>
+                <li class="serch_bar">|<input id="input" type="text"></li>
+                <li class="serch_bar_image"><button></button></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div id="sub_menu_container">
+                <ul>
+                    <li></li>
+                </ul>
+                <ul>
+                    <li></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="movie_chart.html">무비차트</a></li>
+                    <li><a href="movie_info.html">영화소개</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="theater_info.html">극장정보</a></li>
+                    <li><a href="theater_timetable.html">상영시간표</a></li>
+                    <li><a href="theater_price.html">관람료</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">상영시간표</a></li>
+                    <li><a href="#">예매</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="qna.html">1:1문의</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    </ul>
+    <section class="section_container">
+        <div>
+            <h1>비회원 예매 확인</h1>
+            <ul class="tab-menu" style="width:1200px">
+                <li>
+                    <a href="login1.html">로그인</a>
+                </li>
+                <li >
+                    <a href="login2.html">비회원 예매</a>
+                </li>
+                <li class="on">
+                    <a href="login3.html">비회원 예매확인</a>
+                </li>
+            </ul>
+            <h3>비회원 예매 확인</h3>
+            <p style="font-size: 13px;">비회원으로 예매하신
+                고객님은 개인정보(법정생년월일, 휴대폰 번호, 비밀번호(4자리)를 입력해 주세요.
+            </p>
+            <div class="search_box">
+                <p style="font-size: 13px;" class="red">모든 항목은 필수 입력사항입니다.</p>
+                <form>
+                    <table >
+                        <tbody>
+                        <tr>
+                            <th ><label for="txtBirthday">법정생년월일 (8자리)</label></th>
+                            <td><input type="text" title="법정생년월일(8자리)" name="Birthday" id="Birthday" length="8" maxlength="8" required="required"></td>
+                        </tr>
+                        <tr>
+                            <th>휴대폰번호</th>
+                            <td style="text-align:left">
+                                <select title="휴대폰번호 앞자리" name="Mobile1" id=tMobile1">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                -
+                                <input type="text" title="휴대폰번호 중간자리" data-title="휴대폰번호 중간자리"  name="Mobile2" id="Mobile2" digits="digits" length="4" maxlength="4" required="required">
+                                -
+                                <input type="text" title="휴대폰번호 끝자리" data-title="휴대폰번호 끝자리" name="Mobile3" id="Mobile3" digits="digits" length="4" maxlength="4" required="required">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="Password">비밀번호 (4자리)</label></th>
+                            <td><input type="password"  title="비밀번호(4자리)" name="txtPassword" id="txtPassword" digits="digits" length="4" maxlength="4" required="required"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button type="submit" class="round inred" id="btn_submit"><span>비회원 예매확인</span></button>
+                    </div>
+                </form>
+            </div>
+            <div class="step3">
+                <div class="left red">
+                    비회원<br>예매 시<br>참고하세요!
+                </div>
+                <ol>
+                    <li>위 정보 수집 및 이용에 동의하지 않을 경우, 비회원 예매 서비스를 이용하실 수 없습니다.</li>
+                    <li>비회원 예매 시 청소년 관람불가 영화는 예매가 제한됩니다.</li>
+                    <li>만 14세 미만 고객은 비회원으로 예매하실 수 없습니다.</li>
+                    <li>비회원 예매 결제수단은 신용카드만 가능하며 모든 제휴상품권, 쿠폰, 영화예매권 등은 회원 예매 서비스 이용 시 사용 가능합니다.</li>
+                    <li>ARS에서는 취소가 불가능하며, 홈페이지/모바일을 이용하여 취소 처리하실 수 있습니다.</li>
+                    <li>비회원 예매 및 예매 확인/취소 메뉴만 이용 가능합니다. 그 외 서비스는 회원 가입 후 이용해 주십시오. </li>
+                    <li>문의 사항은 CGV고객센터(1544-1122)로 문의해 주시기 바랍니다. (평일 9:00~18:00)</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_container">
+            <div class="logo"><img src="img/hhn_logo.png" alt=""></div>
+            <div class="company">
+                <ul>
+                    <li>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
+                    <li>대표이사 : 허민회 | 사업자등록번호 : 104-81-45690 | 통신판매업신고번호 : 2017-서울용산-0662</li>
+                    <li>사업자정보확인 호스팅사업자 CJ올리브네트웍스 CJ올리브네트웍스</li>
+                    <li>개인정보보호 책임자 심준범 대표이메일 cjcgvmaster@cj.net © CJ CGV. All Rights Reserved</li>
+                </ul>
+            </div>
+            <div class="service_center">
+                <ul>
+                    <li>고객센터 : 1544-1122</li>
+                    <li>고객센터 운영시간 (평일 09:00~18:00)</li>
+                    <li>업무시간 외 자동응답 안내 가능합니다.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

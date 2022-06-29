@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hhncinema</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/header.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/find_id_pw.css">
+    <script>
+        window.onload = function(){
+            var nav = document.querySelector('nav');
+            console.log(nav.offsetHeight);       
+            var sub_menu_container = document.querySelector('#sub_menu_container');         
+            var sub_menu_height = sub_menu_container.scrollHeight;
+            sub_menu_height += "px";
+            console.log(sub_menu_height);
+
+            nav.onmouseenter = () => {
+                sub_menu_container.style.height = sub_menu_height;
+            }
+            nav.onmouseleave = () => {
+                sub_menu_container.style.height = "0px";
+            }
+            var sub_menu_li = document.querySelectorAll('#sub_menu_container a');
+            for(i=0;i<sub_menu_li.length;i++){
+                sub_menu_li[i].onclick = () => {
+                    sub_menu_container.style.height = "0px";
+                }
+            }
+        }
+    </script>
+    <script>
+        $( function() {
+          $( "#tabs" ).tabs();
+        } );
+        </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* padding-top: 5px; */
+        }       
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="header_continer">
+            <div id="header_logo_title_contianer">
+                <div id="header_logo_title">
+                    <a href="index.html"><img src="img/header_logo.png" alt="메인 페이지"></a>
+                    <h3>CULTUREPLEX</h3>
+                </div>
+                <div id="info">
+                    <ul id="member_info_wrap">
+                        <li><a href="login1.html"><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                        <li><a href="check.html"><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                        <li><a href=""><img src="img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                        <li><a href="faq.html"><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div id="nav_container">
+            <ul id="main_menu">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="movie_chart.html">영화</a></li>
+                <li><a href="theater_info.html">극장</a></li>
+                <li><a href="#">예매</a></li>
+                <li><a href="faq.html">고객센터</a></li>
+                <li class="serch_bar">|<input id="input" type="text"></li>
+                <li class="serch_bar_image"><button></button></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div id="sub_menu_container">
+                <ul>
+                    <li></li>
+                </ul>
+                <ul>
+                    <li></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="movie_chart.html">무비차트</a></li>
+                    <li><a href="movie_info.html">영화소개</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="theater_info.html">극장정보</a></li>
+                    <li><a href="theater_timetable.html">상영시간표</a></li>
+                    <li><a href="theater_price.html">관람료</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">상영시간표</a></li>
+                    <li><a href="#">예매</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="qna.html">1:1문의</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="section_container">
+            <div class="tabs">
+                <input id="all" type="radio" name="tab_item" checked>
+                <label class="tab_item" for="all">아이디 찾기</label>
+                <input id="programming" type="radio" name="tab_item">
+                <label class="tab_item" for="programming">비밀번호 찾기</label>
+                <input id="design" type="radio" name="tab_item">
+                <div class="tab_content" id="all_content">
+                    <div class="container">
+                        <h3>가입하신 이메일을 조회를 위한 전화번호를 입력해주세요.</h3>
+                        <form action="" id="frm">
+                            <ul>
+                                <li><label for="tel">전화번호</label></li>
+                                <li class="border_bottom">
+                                    <select name="gcode" id="gcode">
+                                        <option value="82">+82</option>
+                                        <option value="1">+1</option>
+                                        <option value="84">+84</option>
+                                        <option value="55">+55</option>
+                                    </select><input type="text" name="tel" id="tel" placeholder="전화번호 입력하세요 -는 빼고" class="left_border">
+                                </li>
+                                <li>
+                                    <button type="button" class="btn_send_no">인증번호 전송</button>
+                                </li>
+                                <li>
+                                    <input type="text" name="tel" id="tel" placeholder="인증번호 입력" class="left_border">
+                                </li>
+                                <li class="border_bottom">
+                                </li>
+                                    
+                                    <li>
+                                        <button class="btn_next">확인</button>
+                                    </li>
+                            </ul>
+                        </form>
+                
+                    </div>
+                </div>
+                <div class="tab_content" id="programming_content">
+                    <div class="container">
+                        <h3>비밀번호 확인을 위해 가입하신 이메일과 본인인증을 위한 전화번호를 입력해주세요.</h3>
+                        <form action="" id="frm">
+                            <ul>
+                                <li><label for="email">email</label></li>
+                                <input type="text" name="email" id="email" placeholder="email을 입력하세요" class="left_border">
+                                <li class="border_bottom"></li>
+                                <li><label for="tel">전화번호</label></li>
+                                <li class="border_bottom">
+                                    <select name="gcode" id="gcode">
+                                        <option value="82">+82</option>
+                                        <option value="1">+1</option>
+                                        <option value="84">+84</option>
+                                        <option value="55">+55</option>
+                                    </select><input type="text" name="tel" id="tel" placeholder="전화번호 입력하세요 -는 빼고" class="left_border">
+                                </li>
+                                <li>
+                                    <button type="button" class="btn_send_no">인증번호 전송</button>
+                                </li>
+                                <li>
+                                    <input type="text" name="tel" id="tel" placeholder="인증번호 입력" class="left_border">
+                                </li>
+                                <li class="border_bottom">
+                                </li>
+                                    
+                                    <li>
+                                        <button class="btn_next">확인</button>
+                                    </li>
+                            </ul>
+                        </form>
+                
+                    </div>
+            </div>
+        </div>
+    </section>
+        <footer>
+            <div class="footer_container">
+                <div class="logo"><img src="img/hhn_logo.png" alt=""></div>
+                <div class="company">
+                    <ul>
+                        <li>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
+                        <li>대표이사 : 허민회 | 사업자등록번호 : 104-81-45690 | 통신판매업신고번호 : 2017-서울용산-0662</li>
+                        <li>사업자정보확인 호스팅사업자 CJ올리브네트웍스 CJ올리브네트웍스</li>
+                        <li>개인정보보호 책임자 심준범 대표이메일 cjcgvmaster@cj.net © CJ CGV. All Rights Reserved</li>
+                    </ul>
+                </div>
+                <div class="service_center">
+                    <ul>
+                        <li>고객센터 : 1544-1122</li>
+                        <li>고객센터 운영시간 (평일 09:00~18:00)</li>
+                        <li>업무시간 외 자동응답 안내 가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,125 @@
+@charset 'UTF-8';
+
+.passchk_container {
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+}
+.passchk_container h2 {
+    padding: 30px;
+    margin-left: 20px;
+}
+.passchk_container div {
+    width: 600px;
+    height: 40px;
+    margin-left: 250px;
+    /* border: 1px solid black; */
+}
+.box {
+    margin-top: 100px;
+    font-size: 18px;
+}
+.passchk_container div input {
+    width: 350px;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.passchk_container ul {
+    display: inline-block;
+    margin: 60px 0px;
+}
+.passchk_container ul li {
+    margin-left: 270px;
+}
+.btn_delete {
+    width: 100px;
+    height: 40px;
+    background-color: #fb4357;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn_delete:active {
+    background-color: white;
+    color: #fb4357;
+    border: 1px solid #fb4357;
+}
+.btn_delete a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.popup_box {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+    top: calc(50% - 120px);
+    left: calc((50% - 250px));
+    background-color: white;
+    z-index: 2;
+    display: none;
+}
+.close_box {
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    background-color:#fb4357;
+    box-sizing: border-box;
+}
+.close {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding: 8px 10px;
+    color: black;
+}
+.popup_box p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.popup_btn {
+    text-align: center;
+    margin-top: 30px;   
+}
+.popup_update, .popup_cancle {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(224, 224, 224);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+input:focus{
+    margin: 0;
+    padding: 0;
+}
+.popup_update:hover, .popup_cancle:hover {
+    background-color: #fb4357;
+    color: white;
+}
+.popup_update {
+    margin-right: 50px;
+}
+.blur {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}

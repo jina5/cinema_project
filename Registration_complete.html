@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hhncinema</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/header.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css">
+    <script>
+        window.onload = function(){
+            var nav = document.querySelector('nav');
+            console.log(nav.offsetHeight);       
+            var sub_menu_container = document.querySelector('#sub_menu_container');         
+            var sub_menu_height = sub_menu_container.scrollHeight;
+            sub_menu_height += "px";
+            console.log(sub_menu_height);
+
+            nav.onmouseenter = () => {
+                sub_menu_container.style.height = sub_menu_height;
+            }
+            nav.onmouseleave = () => {
+                sub_menu_container.style.height = "0px";
+            }
+            var sub_menu_li = document.querySelectorAll('#sub_menu_container a');
+            for(i=0;i<sub_menu_li.length;i++){
+                sub_menu_li[i].onclick = () => {
+                    sub_menu_container.style.height = "0px";
+                }
+            }
+        }
+    </script>
+    <script>
+        $( function() {
+          $( "#tabs" ).tabs();
+        } );
+        </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* padding-top: 5px; */
+        }
+        .section_container{
+            /* border: 1px solid black; */
+            width: 1200px;
+            /* height: 400px; */
+            margin: 0 auto;
+            margin-top: 5px;
+            text-align: center;
+            padding: 50px;
+            height: 450px;
+        }
+        .img_icon1{
+        position: absolute;
+        display: block;
+        transform: rotate(-30deg);
+        margin-top: 100px;
+        margin-left: 1000px;
+        width: 100px;
+        opacity:0.2;
+        }
+        .img_icon2{
+        position: absolute;
+        transform: rotate(-30deg);
+        margin-bottom: 60px;
+        margin-left: 250px;
+        margin-top: 200px;
+        width: 100px;
+        opacity:0.2;
+        }
+        .img_icon3{
+        position: absolute;
+        transform: rotate(-30deg);
+        display: block;
+        margin-top:0px;
+        margin-left: 900px;
+        width: 100px;
+        opacity:0.2;
+        }
+        .img_icon4{
+        position: absolute;
+        transform: rotate(-30deg);
+        display: block;
+        margin-top: 200px;
+        margin-left: 250px;
+        width: 100px;
+        opacity:0.2;
+        }
+        .img_icon5{
+        position: absolute;
+        display: block;
+        transform: rotate(-30deg);
+        margin-left: 300px;
+        width: 100px;
+        opacity:0.2;
+        }
+        .img_icon6{
+        position: absolute;
+        display: block;
+        transform: rotate(-30deg);
+        margin-bottom: 200px;
+        margin-left: 750px;
+        width: 100px;
+        opacity:0.2;
+        }
+        .img_icon7{
+        position: absolute;
+        display: block;
+        transform: rotate(-30deg);
+        margin-left: 150px;
+        width: 100px;
+        opacity:0.2;
+        }
+        .img_icon8{
+        position: absolute;
+        display: block;
+        transform: rotate(-30deg);
+        margin-top: 150px;
+        margin-left: 100px;
+        width: 100px;
+        opacity:0.2;
+        }
+      
+      h1{
+        text-align: center;
+        padding-bottom: 50px;
+      }
+      p{
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 50px;
+      }
+      button{
+        width: 180px;
+        font-weight: bold;
+        height: 45px;
+        background-color: #fb4357;
+        color: white;
+        border-radius: 20px;
+        border: none;
+      } 
+      button:active {
+         background-color: white;
+        color: #fb4357;
+        border: 1px solid #fb4357;
+    }
+    p > img{
+        width: 60px;
+    }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="header_continer">
+            <div id="header_logo_title_contianer">
+                <div id="header_logo_title">
+                    <a href="index.html"><img src="img/header_logo.png" alt="메인 페이지"></a>
+                    <h3>CULTUREPLEX</h3>
+                </div>
+                <div id="info">
+                    <ul id="member_info_wrap">
+                        <li><a href="login1.html"><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                        <li><a href="check.html"><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                        <li><a href=""><img src="img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                        <li><a href="faq.html"><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div id="nav_container">
+            <ul id="main_menu">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="movie_chart.html">영화</a></li>
+                <li><a href="theater_info.html">극장</a></li>
+                <li><a href="#">예매</a></li>
+                <li><a href="faq.html">고객센터</a></li>
+                <li class="serch_bar">|<input id="input" type="text"></li>
+                <li class="serch_bar_image"><button></button></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div id="sub_menu_container">
+                <ul>
+                    <li></li>
+                </ul>
+                <ul>
+                    <li></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="movie_chart.html">무비차트</a></li>
+                    <li><a href="movie_info.html">영화소개</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="theater_info.html">극장정보</a></li>
+                    <li><a href="theater_timetable.html">상영시간표</a></li>
+                    <li><a href="theater_price.html">관람료</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">상영시간표</a></li>
+                    <li><a href="#">예매</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="qna.html">1:1문의</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="section_container">
+            
+            <img src="img/cinema_icon.png" alt="" class="img_icon1">
+            <img src="img/photography_photo_icon.png" alt="" class="img_icon2">
+            <img src="img/stream_tv_icon.png" alt="" class="img_icon3">
+            <img src="img/slow_media_icon.png" alt="" class="img_icon4">
+            <img src="img/paper_icon.png" alt="" class="img_icon5">
+            <img src="img/track_icon.png" alt="" class="img_icon6">
+            <img src="img/lecture_icon.png" alt="" class="img_icon7">
+            <img src="img/configuration_icon.png" alt="" class="img_icon8">
+        
+           <h1>HHNCINEMA환영합니다!</h1>
+
+           <p>이제부터 0000@000.com으로 로그인이 가능합니다.</p>
+           <p>지금 바로 <img src="img/hhn_logo.png" alt="">CINEMA 의 다양한 서비스를 경험해보세요!</p>
+           <button type="button" onclick="location.href='main_page.html'">지금 바로 예매하러가기</button>
+           <button type="button" onclick="location.href='movie_chart.html'">최신 영화 보러가기</button>
+        </div>
+    </section>
+        <footer>
+            <div class="footer_container">
+                <div class="logo"><img src="img/hhn_logo.png" alt=""></div>
+                <div class="company">
+                    <ul>
+                        <li>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
+                        <li>대표이사 : 허민회 | 사업자등록번호 : 104-81-45690 | 통신판매업신고번호 : 2017-서울용산-0662</li>
+                        <li>사업자정보확인 호스팅사업자 CJ올리브네트웍스 CJ올리브네트웍스</li>
+                        <li>개인정보보호 책임자 심준범 대표이메일 cjcgvmaster@cj.net © CJ CGV. All Rights Reserved</li>
+                    </ul>
+                </div>
+                <div class="service_center">
+                    <ul>
+                        <li>고객센터 : 1544-1122</li>
+                        <li>고객센터 운영시간 (평일 09:00~18:00)</li>
+                        <li>업무시간 외 자동응답 안내 가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

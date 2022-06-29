@@ -1,0 +1,124 @@
+@charset 'utf-8';
+
+section {
+    width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+article {
+    padding-top: 30px;
+}
+article h2 {
+    padding-left: 150px;
+    color: #fb4357;
+}
+caption {
+    text-align: right;
+    color: #fb4357;
+}
+table {
+    width: 900px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+th, td {
+    border-top: 1px solid black;
+}
+td {
+    padding-left: 10px;
+}
+th {
+    width: 150px;
+    padding: 15px 0px;
+    padding-left: 10px;
+    text-align: left;
+    background-color: rgb(245, 245, 245);
+}
+th span {
+    color: #fb4357;
+}
+#area {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+#theater {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+#etc {
+    margin-left: 10px;
+}
+#quiryType {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+}
+#name {
+    width: 130px;
+    height: 25px;
+}
+#email {
+    width: 120px;
+    height: 25px;
+}
+#mail {
+    width: 120px;
+    height: 25px;
+}
+#direct {
+    width: 120px;
+    height: 25px    ;
+    display: none;
+}
+#firstnum {
+    width: 60px;
+    height: 20px;
+}
+#middlenum, #lastnum {
+    width: 70px;
+    height: 20px;
+}
+.otp {
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;  
+}
+#title {
+    width: 665px;
+    height: 25px;
+}
+#content {
+    width: 667px;
+    height: 200px;
+    resize: none;
+}
+.length_container {
+    text-align: right;
+    padding-right: 70px;
+}
+.gg {
+    display: none;
+}
+.btn {
+    text-align: center;
+    padding-top: 20px;
+}
+.btn button {
+    width: 100px;
+    height: 40px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+    background-color: rgb(224, 224, 224);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn button:hover {
+    background-color: #fb4357;
+    color: white;
+}
