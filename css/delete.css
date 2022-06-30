@@ -123,3 +123,7 @@ input:focus{
     left: 0;
     display: none;
 }
+input:focus{
+    margin: 0;
+    padding: 0;
+}

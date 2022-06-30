@@ -10,143 +10,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/nav.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/theater.css">
-
-    <script>
-        window.onload = function () {
-            //-----------------헤더
-            var nav = document.querySelector('nav');
-            var sub_menu_container = document.querySelector('#sub_menu_container');
-            var sub_menu_height = sub_menu_container.scrollHeight;
-            sub_menu_height += "px";
-
-            nav.onmouseenter = () => {
-                sub_menu_container.style.height = sub_menu_height;
-            }
-            nav.onmouseleave = () => {
-                sub_menu_container.style.height = "0px";
-            }
-            var sub_menu_li = document.querySelectorAll('#sub_menu_container a');
-            for (i = 0; i < sub_menu_li.length; i++) {
-                sub_menu_li[i].onclick = () => {
-                    sub_menu_container.style.height = "0px";
-                }
-            }
-            //-----------------섹션
-            var seoul = document.querySelector('.seoul');
-            var seoul_menu = document.getElementById('seoul');
-            var gg = document.querySelector('.gg');
-            var gg_menu = document.getElementById('gg');
-            seoul.onclick = () => {
-                seoul_menu.style.height = '100px';
-                seoul_menu.style.display = '';
-                seoul.style.backgroundColor = '#fb4357';
-                seoul.style.color = 'white';
-                gg.style.color = 'black';
-                gg_menu.style.height = '0px';
-                gg_menu.style.overflow = 'hidden';
-                gg.style.backgroundColor = 'rgb(224,224,224)';
-                theater_li[0].style.color = '#fb4357';
-                theater_li[1].style.color = '';
-                theater_li[2].style.color = '';
-            }
-            gg.onclick = () => {
-                gg_menu.style.height = '100px';
-                gg_menu.style.display = '';
-                seoul.style.color = 'black';
-                gg.style.color = 'white';
-                gg.style.backgroundColor = '#fb4357';
-                seoul_menu.style.height = '0px';
-                seoul_menu.style.overflow = 'hidden';
-                seoul.style.backgroundColor = 'rgb(224,224,224)';
-                theater_li[3].style.color = '#fb4357';
-                theater_li[4].style.color = '';
-            }
-            //--------- 극장 누르면 빨간색으로.. (한번에 처리 )
-            var theater_li = document.querySelectorAll('.theater_sub_menu ul li a');
-            theater_li[0].style.color = '#fb4357';
-            theater_li[0].onclick = () => {
-                for (i = 0; i < theater_li.length; i++) {
-                    theater_li[i].style.color = '';
-                }
-                theater_li[0].style.color = '#fb4357';
-            }
-            theater_li[1].onclick = () => {
-                for (i = 0; i < theater_li.length; i++) {
-                    theater_li[i].style.color = '';
-                }
-                theater_li[1].style.color = '#fb4357';
-            }
-            theater_li[2].onclick = () => {
-                for (i = 0; i < theater_li.length; i++) {
-                    theater_li[i].style.color = '';
-                }
-                theater_li[2].style.color = '#fb4357';
-            }
-            theater_li[3].onclick = () => {
-                for (i = 0; i < theater_li.length; i++) {
-                    theater_li[i].style.color = '';
-                }
-                theater_li[3].style.color = '#fb4357';
-            }
-            theater_li[4].onclick = () => {
-                for (i = 0; i < theater_li.length; i++) {
-                    theater_li[i].style.color = '';
-                }
-                theater_li[4].style.color = '#fb4357';
-            }
-
-            //----------------극장정보 상영시간표 관람료
-            var detail_menu = document.querySelectorAll('.theater_detail_menu li a');
-            var detail = document.querySelectorAll('.theater_detail_menu li');
-            detail_menu[0].style.color = 'white';
-            detail_menu[0].style.fontWeight = 'bold';
-            detail_menu[0].style.fontSize = '23px';
-            detail[0].style.backgroundColor = '#fb4357';
-
-            detail_menu[0].onclick = () => {
-                for (i = 0; i < detail_menu.length; i++) {
-                    detail_menu[i].style.color = '';
-                    detail_menu[i].style.fontWeight = '';
-                    detail_menu[i].style.fontSize = '';
-                    detail[i].style.backgroundColor = '';
-                }
-                detail_menu[0].style.color = 'white';
-                detail_menu[0].style.fontWeight = 'bold';
-                detail_menu[0].style.fontSize = '23px';
-                detail[0].style.backgroundColor = '#fb4357';
-
-            }
-            detail_menu[1].onclick = () => {
-                for (i = 0; i < detail_menu.length; i++) {
-                    detail_menu[i].style.color = '';
-                    detail_menu[i].style.fontWeight = '';
-                    detail_menu[i].style.fontSize = '';
-                    detail[i].style.backgroundColor = '';
-
-                }
-                detail_menu[1].style.color = 'white';
-                detail_menu[1].style.fontWeight = 'bold';
-                detail_menu[1].style.fontSize = '23px';
-                detail[1].style.backgroundColor = '#fb4357';
-
-            }
-            detail_menu[2].onclick = () => {
-                for (i = 0; i < detail_menu.length; i++) {
-                    detail_menu[i].style.color = '';
-                    detail_menu[i].style.fontWeight = '';
-                    detail_menu[i].style.fontSize = '';
-                    detail[i].style.backgroundColor = '';
-                }
-                detail_menu[2].style.color = 'white';
-                detail_menu[2].style.fontWeight = 'bold';
-                detail_menu[2].style.fontSize = '23px';
-                detail[2].style.backgroundColor = '#fb4357';
-
-            }
-        }
-
-
-    </script>
+    <script src="script/theater.js" type="text/javascript"></script>
+    <script src="script/nav.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -154,15 +19,15 @@
         <div class="header_continer">
             <div id="header_logo_title_contianer">
                 <div id="header_logo_title">
-                    <a href="#"><img src="img/header_logo.png" alt="메인 페이지"></a>
+                    <a href="index.html"><img src="img/header_logo.png" alt="메인 페이지"></a>
                     <h3>CULTUREPLEX</h3>
                 </div>
                 <div id="info">
                     <ul id="member_info_wrap">
-                        <li><a href=""><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
-                        <li><a href=""><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                        <li><a href="login1.html"><img src="img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                        <li><a href="check.html"><img src="img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
                         <li><a href=""><img src="img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
-                        <li><a href=""><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                        <li><a href="faq.html"><img src="img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -173,10 +38,10 @@
             <ul id="main_menu">
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
-                <li><a href="#">영화</a></li>
-                <li><a href="#">극장</a></li>
+                <li><a href="movie_chart.html">영화</a></li>
+                <li><a href="theater_info.html">극장</a></li>
                 <li><a href="#">예매</a></li>
-                <li><a href="#">고객센터</a></li>
+                <li><a href="faq.html">고객센터</a></li>
                 <li class="serch_bar">|<input id="input" type="text"></li>
                 <li class="serch_bar_image"><button></button></li>
                 <li></li>
@@ -190,21 +55,21 @@
                     <li></li>
                 </ul>
                 <ul class="sub_menu">
-                    <li><a href="#">무비차트</a></li>
-                    <li><a href="#">영화소개</a></li>
+                    <li><a href="movie_chart.html">무비차트</a></li>
+                    <li><a href="movie_info.html">영화소개</a></li>
                 </ul>
                 <ul class="sub_menu">
-                    <li><a href="#">극장정보</a></li>
-                    <li><a href="#">상영시간표</a></li>
-                    <li><a href="#">관람료</a></li>
+                    <li><a href="theater_info.html">극장정보</a></li>
+                    <li><a href="theater_timetable.html">상영시간표</a></li>
+                    <li><a href="theater_price.html">관람료</a></li>
                 </ul>
                 <ul class="sub_menu">
                     <li><a href="#">상영시간표</a></li>
                     <li><a href="#">예매</a></li>
                 </ul>
                 <ul class="sub_menu">
-                    <li><a href="#">1:1문의</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="qna.html">1:1문의</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </div>
         </div>
@@ -230,9 +95,9 @@
         </div>
         <div class="theater_detail_container">
             <ul class="theater_detail_menu">
-                <li><a href="#" title="극장정보 탭으로 이동">극장정보</a></li>
-                <li><a href="#" title="상영시간표 탭으로 이동">상영시간표</a></li>
-                <li><a href="#" title="관람료 탭으로 이동">관람료</a></li>
+                <li><a href="/theater_info.html" title="극장정보 탭으로 이동">극장정보</a></li>
+                <li><a href="/theater_timetable.html" title="상영시간표 탭으로 이동">상영시간표</a></li>
+                <li><a href="/theater_price.html" title="관람료 탭으로 이동">관람료</a></li>
             </ul>
         </div>
         <div id="tab1">

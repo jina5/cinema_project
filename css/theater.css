@@ -205,6 +205,13 @@ ul {
     border-collapse: collapse;
     margin: 30px auto;
 }
+.calender th {
+    height:20px;
+    font-size: 15px;
+    vertical-align: middle;
+    border: 1px solid gray;
+    background-color: white !important;
+}
 
 .calender td {
     height: 20px;
@@ -215,6 +222,7 @@ ul {
     vertical-align: middle;
 }
 
+
 .calender table a {
     text-decoration: none;
     color: black
@@ -222,8 +230,10 @@ ul {
 
 .calender td:nth-child(7n),
 .calender th:nth-child(7n) {
-    color: blue;
-    background-color: rgb(200, 200, 255);
+    background-color: rgb(200, 216, 255);
+}
+.calender table a:nth-child(7n){
+    color:blue;
 }
 
 .calender td:nth-child(7n+1),
@@ -246,11 +256,7 @@ ul {
     font-weight: bold;
 }
 
-.calender th {
-    width: 100px;
-    border: 1px solid gray;
-    background-color: white !important;
-}
+
 
 .age_icon {
     margin-bottom: -3px;
@@ -307,4 +313,43 @@ ul {
     border:1px solid rgb(224, 224, 224);
     border-radius: 20px;
     margin-bottom: 50px;
+}
+.theater_price{
+    display: flex;
+}
+.price_menu{
+    padding:50px 20px;
+}
+.price_menu table{
+    width:400px;
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+.price_menu table th{
+   background-color: rgb(224, 224, 224);
+}
+
+h2,h3{
+    padding-top:30px;
+    padding-bottom: 5px;
+}
+.price_menu p{
+padding:10px 0px;
+text-align: center;
+font-size: 20px;}
+
+.theater_price_detail li{
+    padding: 5px 0px;
+}
+.theater_price_detail{
+    padding:30px 0px;
+}
+#map{
+    padding:50px;
+    width:500px;
+    height: 500px;
+}
+li{
+    list-style-type: none;
 }
