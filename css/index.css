@@ -1,0 +1,114 @@
+@charset 'utf-8';
+#trailer_container{
+    width: 100%;
+    display: flex;
+  }
+  #left_box{
+    background-color: black;
+    width: 480px;
+    height: 500px;
+  }
+  #right_box{
+    background-color: black;
+    width: 480px;
+    height: 500px;
+    justify-content: space-between;
+  }
+  #trailer_container > video{
+    width: 900px;
+    height: 500px;
+    background-color: black;
+    background: linear-gradient(black, black);
+  }
+  #poster_container{
+    width: 1200px;
+    /* height: 700px; */
+    /* border: 1px solid black; */
+    margin: 0 auto;
+  }
+  #swiper_wrapper{
+    width: 1200px;
+    /* height: 600px; */
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #poster_info_container{
+    width: 200px;
+    /* border: 1px solid black; */
+    height: 330px;
+  }
+  #poster_warp{
+    width: 200px;
+    /* height: 250px; */
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+  }
+  #info_warp{
+    width: 200px;
+    /* height: 80px; */
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+  #info_warp > a{
+    text-decoration: none;
+    color: black;
+  }
+  #poster_warp > a >img{
+    box-sizing: border-box;
+    width: 200px;
+    /* height: 250px; */
+    border-radius: 15px;
+  }
+  #btn_warp_container{
+    width: 1200px;
+    /* height: 100px; */
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+  }
+  #btn_warp{
+    display: table;
+    font-weight: bold;
+    width: 400px;
+    /* height: 40px; */
+    margin-top: 60px;
+  }
+  #btn_warp a{
+    display: table-cell;
+    font-size: 1.8em;
+    text-align: center;
+    vertical-align: bottom;
+    text-decoration: none;
+    color: black;
+  }
+  #btn_warp > span{
+    display: table-cell;
+    color: rgb(109, 106, 106);
+    font-size: 1.5em;
+    vertical-align: middle;
+    
+  }
+  #btn_all_movie{
+    display: table;
+    /* border: 1px solid black; */
+  }
+  #btn_all_movie a{
+    display: table-cell;
+    vertical-align: bottom;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+  }
+  #middle_baaner{
+    text-align: center;
+    background-color: rgb(34, 34, 34);
+    width: 100%;
+    margin-top: 25px;
+  }

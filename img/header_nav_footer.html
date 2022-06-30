@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var nav = document.querySelector('nav');
+            console.log(nav.offsetHeight);       
+            var sub_menu_container = document.querySelector('#sub_menu_container');         
+            var sub_menu_height = sub_menu_container.scrollHeight;
+            sub_menu_height += "px";
+            console.log(sub_menu_height);
+
+            nav.onmouseenter = () => {
+                sub_menu_container.style.height = sub_menu_height;
+            }
+            nav.onmouseleave = () => {
+                sub_menu_container.style.height = "0px";
+            }
+            var sub_menu_li = document.querySelectorAll('#sub_menu_container a');
+            for(i=0;i<sub_menu_li.length;i++){
+                sub_menu_li[i].onclick = () => {
+                    sub_menu_container.style.height = "0px";
+                }
+            }
+        }
+    </script>
+    <style>
+        .header_continer{
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+        #header_welcom_menu{
+            width: 100%;
+            /* border: 1px solid black; */
+            height: 50px;
+        }
+        #header_logo_title_contianer{
+            width: 1200px;
+            /* border: 1px solid black; */
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+        }
+        #header_logo_title{
+            width: 500px;
+            /* border: 1px solid black; */
+            display: flex;
+        }
+        #header_logo_title h3{
+            display: flex;
+            margin-bottom: 0px;
+            font-weight: bold;
+            font-size: 1.5em;
+            letter-spacing:10px;
+            align-items: flex-end;    
+        }
+        #info{
+            /* border: 1px solid black; */
+            width: 400px;
+            margin-left:300px;
+        }
+        #member_info_wrap{
+            display: flex;
+            list-style-type: none;
+            text-align: center;
+        }
+        #member_info_wrap >li{
+            display: flex;
+            width: 70px;
+            height: 10px;
+            margin-left: 15px;
+            margin-top: 40px;
+        }
+        #member_info_wrap > li > a{
+            text-decoration: none;
+            color: black;
+            font-size: 13px;
+            text-align: center;
+        }
+        #member_info_wrap > li > a >img{
+            width: 46px;
+        }
+      
+        nav{
+            width:1920px;
+            margin: 10px auto;
+            border-top:1px solid rgb(210, 210, 210);
+            display: flex;
+            flex-direction: column;
+        }
+        ul{
+            list-style-type: none;
+            padding-inline-start: 0px;
+            margin: 0;
+            padding:0; 
+        }
+        #main_menu{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+        }
+        li{
+            width: 192px;
+        }
+        #main_menu a:link, #main_menu a:visited{
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0px;
+            text-align: center;
+            color:black;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .sub_menu a:link, .sub_menu a:visited{
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0px;
+            text-align: center;
+            font-size: 1em;
+            color:black;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        #sub_menu_container{
+            width: 100%;
+            height: 0px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            transition-property: all;
+            transition-duration: 1s;
+            border-bottom:1px solid red;
+        }
+        .serch_bar{
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            color: rgb(210, 210, 210);
+            background-position: center;
+        }
+        .serch_bar_image{
+            background-image: url(/img/zoom.png);
+            background-repeat: no-repeat;
+            background-size: 35px;
+            margin-top: 10px;
+            opacity: 0.5;
+            background-position: center;
+            display: inline-block;
+            text-align: center;
+        }
+        .serch_bar_image > button{
+            width: 33px;
+            height: 35px;
+            opacity: 0.0; 
+            border: 0px; 
+            border-radius: 15%;
+            margin-top: 3px;
+        }
+        .serch_bar_image > button:hover{
+            opacity: 0.5;
+            background-color:transparent;
+            border: 1px solid black;
+            border-width: 2px;
+            box-sizing: border-box;
+        }
+        .serch_bar_image > button:active{
+            opacity: 1;
+        }
+        #input{
+            display: flex;
+            height: 22px;
+            border: 0px;
+            font-size: 22px;
+            margin-bottom: 1px;
+            width: 250px;
+        }
+        input:focus { 
+            margin-top: 10px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_continer">
+            <div id="header_logo_title_contianer">
+            <div id="header_logo_title">
+                <a href="#"><img src="/img/header_logo.png" alt="메인 페이지"></a>
+                 <h3>CULTUREPLEX</h3>
+            </div>
+            <div id="info">
+                <ul id="member_info_wrap">
+                    <li><a href=""><img src="/test/img/loginPassword.png" alt=""><br><span>로그인</span></a></li>
+                    <li><a href=""><img src="/test/img/header_loginJoin.png" alt=""><br><span>회원가입</span></a></li>
+                    <li><a href=""><img src="/test/img/header_loginMember.png" alt=""><br><span>MY CGV</span></a></li>
+                    <li><a href=""><img src="/test/img/header_loginCustomer.png" alt=""><br><span>고객센터</span></a></li>
+                   </ul>
+            </div>
+        </div>
+        </div>
+    </header>
+    <nav>
+        <ul id="main_menu">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">영화</a></li>
+            <li><a href="#">극장</a></li>
+            <li><a href="#">예매</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li class="serch_bar">|<input id="input" type="text" ></li>
+            <li class="serch_bar_image"><button></button></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div id="sub_menu_container">
+            <ul >
+                <li></li>
+            </ul>
+            <ul >
+                <li></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">무비차트</a></li>
+                <li><a href="#">영화소개</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">극장정보</a></li>
+                <li><a href="#">상영시간표</a></li>
+                <li><a href="#">관람료</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">상영시간표</a></li>
+                <li><a href="#">예매</a></li>
+            </ul>
+            <ul class="sub_menu">
+                <li><a href="#">1:1문의</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
